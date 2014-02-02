@@ -1,0 +1,154 @@
+/**
+ * @author Tomasz Kuczak
+ * @copyright Copyright (C) 2013 by Tomasz Kuczak. All right reserved.
+ */
+
+body > header
+{
+	background: #1e1e1e;
+	height: 35px;
+	line-height: 35px;
+	color: #fff;
+	border-bottom: 1px solid #1b1b1b;
+	border-top: 1px solid #1b1b1b;
+	-webkit-box-shadow: 0px 1px 4px rgba(0,0,0,0.3), inset 0px 1px 0px rgba(255,255,255,0.13);
+	-moz-box-shadow: 0px 1px 4px rgba(0,0,0,0.3), inset 0px 1px 0px rgba(255,255,255,0.13);
+	box-shadow: 0px 1px 4px rgba(0,0,0,0.3), inset 0px 1px 0px rgba(255,255,255,0.13);
+	position: fixed;
+	margin-top: -50px;
+	z-index: 9999;
+	width: 100%;
+	
+}
+
+body > header a
+{
+	text-decoration: none;
+	color: #fff;
+}
+
+h2
+{
+	background: #660066;
+	border: 1px solid #2c0034;
+	-webkit-box-shadow: 0px 1px 4px rgba(0,0,0,0.3), inset 0px 1px 0px rgba(255,255,255,0.13);
+	-moz-box-shadow: 0px 1px 4px rgba(0,0,0,0.3), inset 0px 1px 0px rgba(255,255,255,0.13);
+	box-shadow: 0px 1px 4px rgba(0,0,0,0.3), inset 0px 1px 0px rgba(255,255,255,0.13);
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	color: #fff;
+	text-shadow: rgba(0,0,0,0.5) 0px -1px 0px;
+	padding: 8px;
+	font-weight: bold;
+	position: relative;
+	overflow: hidden;
+}
+
+h2, h2 a:link, h2 a:visited
+{
+	text-decoration: none;
+	color: #ffffff;
+	text-shadow: rgba(0,0,0,0.5) 0px -1px 0px;	
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.fractalTab
+{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.fractalTab > ul > li
+{
+	display: inline-block;
+	padding: 0 5px;
+}
+
+.fractalTab > ul > li:hover
+{
+	background: #660066;
+}
+
+#wrap
+{
+	height: 100%;
+	min-width: 650px;
+	margin: 50px auto;
+	padding: 0px 5px;
+	width: 80%;
+}
+
+#content
+{
+	padding: 5px;
+	margin: 0 auto;
+	background: #fff;
+}
+
+#content > div p
+{
+	padding: 10px;
+	background-color: #f5f5f5;
+	color: #333333;
+	font-size: 13px;
+	min-height: 3em;
+	overflow: hidden;
+	line-height: 1.4em;
+	font-family: "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+	margin-bottom: 2em;
+}
+
+#content .breadcrumbs
+{
+	background: #1e1e1e;
+	border: 1px solid #1b1b1b;
+	-webkit-box-shadow: 0px 1px 4px rgba(0,0,0,0.3), inset 0px 1px 0px rgba(255,255,255,0.13);
+	-moz-box-shadow: 0px 1px 4px rgba(0,0,0,0.3), inset 0px 1px 0px rgba(255,255,255,0.13);
+	box-shadow: 0px 1px 4px rgba(0,0,0,0.3), inset 0px 1px 0px rgba(255,255,255,0.13);
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	color: #ffffff;
+	text-shadow: rgba(0,0,0,0.5) 0px -1px 0px;
+	padding: 12px;
+	padding-right: 8px;
+	padding-left: 8px;	
+	font-size: 12px;
+	font-weight: bold;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 2em;
+}
+
+
+#content .breadcrumbs a
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+.actions
+{
+	list-style: none;
+	padding: 5px 10px;
+	background-color: #f5f5f5;	
+}
+
+hr
+{
+	border-right: 0px none rgb(255, 255, 255);
+	border-width: 1px 0px 0px;
+	border-style: solid none none;
+	border-color: rgb(231, 231, 231) rgb(255, 255, 255) rgb(255, 255, 255);
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	height: 1px;
+	margin: 5px 0px;
+	display: block;
+	clear: both;
+}

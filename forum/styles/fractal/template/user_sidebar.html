@@ -1,0 +1,63 @@
+<nav id="usr-nav">
+	<div id="usr-nav-wrap">
+		<div class="usr-nav-section">
+			<h3>Notifications:</h3>
+			<ul>
+				<!-- IF S_DISPLAY_PM --> <li><a href="{U_PRIVATEMSGS}">{PRIVATE_MESSAGE_INFO}</a></li><!-- ENDIF -->
+			</ul>
+		</div>
+		<hr class="sep">
+		<div class="usr-nav-section">
+			<h3>Friends:</h3>
+			<ul>
+				<!-- IF .friends_online or .friends_offline -->
+
+				<!-- BEGIN friends_online -->
+				<li class="friend-online" title="{L_FRIENDS_ONLINE}">{friends_online.USERNAME_FULL} <!-- IF S_SHOW_PM_BOX --> <input type="submit" name="add_to[{friends_online.USER_ID}]" value="{L_ADD}" class="button2" /><!-- ENDIF --></li>
+				<!-- END friends_online -->
+
+				<!-- BEGIN friends_offline -->
+				<li class="friend-offline" title="{L_FRIENDS_OFFLINE}">{friends_offline.USERNAME_FULL} <!-- IF S_SHOW_PM_BOX --><input type="submit" name="add_to[{friends_offline.USER_ID}]" value="{L_ADD}" class="button2" /><!-- ENDIF --></li>
+				<!-- END friends_offline -->
+				<!-- ELSE -->
+				{S_NO_FRIENDS}
+				<!-- ENDIF -->
+				<li class="more"><a href="{U_FRIENDS}">More <img src="{T_THEME_PATH}/images/down.png" class="down-img"></a></li>
+			</ul>
+		</div>
+		<hr class="sep">
+		<div class="usr-nav-section">
+			<h3>Profile:</h3>
+			<table>
+				<tr><td>Coins:</td><td>9001</td></tr>
+				<tr><td>Time played:</td><td>2h30min</td></tr>
+			</table>
+			<div class="more">More <img src="{T_THEME_PATH}/images/down.png" class="down-img"></div>
+		</div>
+		<hr class="sep">
+		<div class="usr-nav-section">
+			<h3>Stats:</h3>
+			<ul>
+				<li>Heroes <img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
+				<li>Craftplay <img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
+				<li>Bananacraft <img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
+				<li class="more">More <img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
+			</ul>
+		</div>
+		<hr class="sep">
+		<div class="usr-nav-section">
+			<h3>Other:</h3>
+			<ul>
+				<li><a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e">{L_PROFILE}</a></li>
+				<!-- IF S_DISPLAY_SEARCH -->
+				<li><a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a></li>
+				<!-- ENDIF -->
+				<!-- IF U_RESTORE_PERMISSIONS -->
+				<li><a href="{U_RESTORE_PERMISSIONS}">{L_RESTORE_PERMISSIONS}</a></li>
+				<!-- ENDIF --> 
+				<li>Make a donation</li>
+				<li><a href="{U_LOGIN_LOGOUT}" title="{S_LOGOUT}" accesskey="x">{S_LOGOUT}</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
