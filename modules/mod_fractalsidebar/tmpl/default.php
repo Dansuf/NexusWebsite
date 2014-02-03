@@ -52,7 +52,7 @@ $document->addScript($scriptPath);
 						<tr><td><img class="icon-img" src="<?php echo $u_images . 'coin.png'; ?>"> <span>Coins:</span></td><td>9001</td></tr>
 						<tr><td><img class="icon-img" src="<?php echo $u_images . 'clock.png'; ?>"> <span>Time played:</span></td><td>2h30min</td></tr>
 					</table>
-					<div class="more">More <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></div>
+					<div class="more"><a href="<?php echo append_sid("{$phpbb_root_path}memberlist.$phpEx", 'mode=viewprofile&amp;u=' . $user->data['user_id']); ?>">More <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></a></div>
 				</div>
 				<hr class="sep">
 				<div class="usr-nav-section">

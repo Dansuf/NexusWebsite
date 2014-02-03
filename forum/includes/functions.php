@@ -4803,8 +4803,10 @@ function page_header($page_title = '', $display_online_list = true, $item_id = 0
 		'AVATAR'				=> get_user_avatar($user->data['user_avatar'], $user->data['user_avatar_type'], $user->data['user_avatar_width'], $user->data['user_avatar_height'], 'USER_AVATAR', true),
 	));
 	
-	/* Code below is just a clear copy from ucp.php */
-
+	
+	if($phpbb_root_path=="./") // Fractal: Change it to appropiate path if its needed
+	{
+		/* Code below is just a clear copy from ucp.php */
 	// Output listing of friends online
 	$update_time = $config['load_online_time'] * 60;
 
@@ -4848,8 +4850,9 @@ function page_header($page_title = '', $display_online_list = true, $item_id = 0
 		);
 	}
 	$db->sql_freeresult($result);
-	
 	/* copy end */
+	}
+	
 
 	// application/xhtml+xml not used because of IE
 	header('Content-type: text/html; charset=UTF-8');

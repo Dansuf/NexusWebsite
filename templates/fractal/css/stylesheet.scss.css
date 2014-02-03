@@ -519,41 +519,45 @@ select:focus {
   box-shadow: -1px 0 1px rgba(0, 0, 0, 0.1);
   color: #c9c9c9; }
 
-#usr-nav-name .heex {
-  transition: margin-right 0.25s;
-  transition-timing-function: cubil-bezier(0, 0.5, 1, 0.5);
-  width: 5px;
-  height: 30px;
-  margin: 5px;
-  margin-right: 10px;
-  display: inline-block;
-  background: #088a08; }
-  #usr-nav-name .heex > div {
-    z-index: 1;
+#usr-nav-name {
+  position: relative; }
+  #usr-nav-name .heex {
+    transition: margin-right 0.25s;
+    transition-timing-function: cubil-bezier(0, 0.5, 1, 0.5);
+    width: 5px;
+    height: 30px;
+    margin: 5px;
+    margin-right: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #088a08; }
+    #usr-nav-name .heex > div {
+      z-index: 1;
+      width: 0;
+      content: "";
+      margin-right: 5px;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 8.66px solid #4f4f4f;
+      position: relative;
+      float: left; }
+  #usr-nav-name .heex:after {
     width: 0;
     content: "";
-    margin-right: 5px;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 8.66px solid #4f4f4f;
+    border-left: 8.66px solid #088a08;
     position: relative;
+    top: -30px;
+    left: 5px;
     float: left; }
-#usr-nav-name .heex:after {
-  width: 0;
-  content: "";
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-left: 8.66px solid #088a08;
-  position: relative;
-  top: -30px;
-  left: 5px;
-  float: left; }
 
 #usr-nav-name:hover {
   cursor: pointer; }
 
 #usr-nav-name:hover .heex {
-  margin-right: 0px; }
+  margin-right: 10px; }
 
 #usr-nav hr {
   width: 100%;

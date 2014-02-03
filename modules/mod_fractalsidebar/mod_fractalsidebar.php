@@ -6,7 +6,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 global $phpbb_root_path, $phpEx, $user, $db, $config, $cache, $template, $auth;
 
 define('IN_PHPBB', true);
-$phpbb_root_path = (defined('PHPBB_ROOT_PATH')) ? PHPBB_ROOT_PATH : './forum/';
+$phpbb_root_path = (defined('PHPBB_ROOT_PATH')) ? PHPBB_ROOT_PATH : 'forum/';
 $phpEx = substr(strrchr(__FILE__, '.'), 1);
 include($phpbb_root_path . 'common.' . $phpEx); 
 include($phpbb_root_path . 'includes/bbcode.' . $phpEx);
@@ -102,13 +102,13 @@ if ($user->data['user_id'] != ANONYMOUS)
 		if($which)
 		{
 			$friends_online[] = '<li style="color: #'. get_username_string('colour', $row['user_id'], $row['username'], $row['user_colour'])
-			. '"><img class="icon-img" src="' . $u_images . 'online.png "> <span>' . get_username_string('username', $row['user_id'], $row['username'], $row['user_colour'])
+			. '"><img class="icon-img" src="' . $u_images . 'online.png "> <span>' . get_username_string('full', $row['user_id'], $row['username'], $row['user_colour'])
 			. "</span></li>";
 		}
 		else
 		{
 			$friends_offline[] = '<li style="color: #'. get_username_string('colour', $row['user_id'], $row['username'], $row['user_colour'])
-			. '"><img class="icon-img" src="' . $u_images . 'offline.png "> <span>' . get_username_string('username', $row['user_id'], $row['username'], $row['user_colour'])
+			. '"><img class="icon-img" src="' . $u_images . 'offline.png "> <span>' . get_username_string('full', $row['user_id'], $row['username'], $row['user_colour'])
 			. "</span></li>";
 		}
 		

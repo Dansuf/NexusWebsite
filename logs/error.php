@@ -58,3 +58,4 @@
 2014-01-13	09:51:38	INFO	127.0.0.1	Joomla FAILURE: 	Invalid password
 2014-01-19	11:09:46	INFO	127.0.0.1	 FAILURE: 	User does not exist
 2014-02-01	16:35:26	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-03	18:47:50	INFO	127.0.0.1	 FAILURE: 	Invalid password
