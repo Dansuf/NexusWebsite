@@ -708,6 +708,8 @@ function utf8_strspn($str, $mask, $start = null, $length = null)
 * @param string
 * @return string with first character as upper case (if applicable)
 */
+if(!function_exists('utf8_ucfirst'))
+{
 function utf8_ucfirst($str)
 {
 	switch (utf8_strlen($str))
@@ -725,6 +727,7 @@ function utf8_ucfirst($str)
 			return utf8_strtoupper($matches[1]) . $matches[2];
 		break;
 	}
+}
 }
 
 /**

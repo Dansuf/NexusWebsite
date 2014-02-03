@@ -23,6 +23,8 @@ $coins;
 
 $u_images = JURI::base() . 'images/';
 
+define('MAX_FRIENDS',5); // Max number of friends in friends list
+
 if ($user->data['user_id'] != ANONYMOUS)
 {	
 	$u_privatemsgs = append_sid("{$phpbb_root_path}ucp.$phpEx", 'i=pm&amp;folder=inbox');

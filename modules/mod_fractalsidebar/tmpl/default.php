@@ -30,18 +30,50 @@ $document->addScript($scriptPath);
 					<h3><img src="<?php echo $u_images . 'friends.png'; ?>"> <span>Friends:</span></h3>
 					<ul>
 						<?php 
-						if(!$friends_online && !$friends_offline)
+						if($friends_online || $friends_offline)
+						{
+							if(sizeof($friends_online) + sizeof($friends_offline) <= MAX_FRIENDS)
+							{
+								foreach($friends_online as &$friend)
+								{
+									echo $friend;
+								}
+								foreach($friends_offline as &$friend)
+								{
+									echo $friend;
+								}
+							} 
+							else if(sizeof($friends_online) > MAX_FRIENDS)
+							{
+								for($i=0;$i < MAX_FRIENDS; $i++)
+								{
+									echo $friends_online[$i];
+								}
+							}
+							else
+							{
+								foreach($friends_online as &$friend)
+								{
+									echo $friend;
+								}
+								if(sizeof($friends_offline) < (MAX_FRIENDS-sizeof($friends_online)))
+								{
+									for($i=0;$i < sizeof(friends_offline); $i++)
+									{
+										echo $friends_offline[$i];
+									}
+								}
+								else 
+								{
+									for($i=0;$i < (MAX_FRIENDS-sizeof($friends_online)); $i++)
+									{
+										echo $friends_offline[$i];
+									}
+								}
+							}
+						}
+						else
 							echo "You have no friends";
-						foreach($friends_online as &$friend)
-						{
-							echo $friend;
-						}
-						?>
-						<?php 
-						foreach($friends_offline as &$friend)
-						{
-							echo $friend;
-						}
 						?>
 						<li class="more"><a href="<?php echo $u_friend; ?>">More <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></a></li>
 					</ul>
