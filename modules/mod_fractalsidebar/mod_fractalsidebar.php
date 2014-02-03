@@ -19,6 +19,7 @@ $user->setup('ucp');
 
 $friends_online = [];
 $friends_offline = [];
+$coins;
 
 $u_images = JURI::base() . 'images/';
 
@@ -129,6 +130,18 @@ if ($user->data['user_id'] != ANONYMOUS)
 	/* copy end */
 
 	make_jumpbox(append_sid("{$phpbb_root_path}viewforum.$phpEx"));
+	
+	// Grab info for profile section
+	
+	$sql = "SELECT *
+	FROM " . PROFILE_FIELDS_DATA_TABLE . "
+	WHERE user_id =" . $user->data['user_id'];
+	$result = $db->sql_query($sql);
+	$row = $db->sql_fetchrow($result);
+	$db->sql_freeresult($result);
+	$coins = $row['pf_coins'] ? $row['pf_coins'] : 0;
+	
+	
 }
 
 $charImage = JURI::base() . 'images/char.png';

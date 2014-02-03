@@ -30,7 +30,8 @@ $document->addScript($scriptPath);
 					<h3><img src="<?php echo $u_images . 'friends.png'; ?>"> <span>Friends:</span></h3>
 					<ul>
 						<?php 
-						echo $huha;
+						if(!$friends_online && !$friends_offline)
+							echo "You have no friends";
 						foreach($friends_online as &$friend)
 						{
 							echo $friend;
@@ -49,7 +50,7 @@ $document->addScript($scriptPath);
 				<div class="usr-nav-section">
 					<h3>Profile:</h3>
 					<table>
-						<tr><td><img class="icon-img" src="<?php echo $u_images . 'coin.png'; ?>"> <span>Coins:</span></td><td>9001</td></tr>
+						<tr><td><img class="icon-img" src="<?php echo $u_images . 'coin.png'; ?>"> <span>Coins:</span></td><td><?php echo $coins; ?></td></tr>
 						<tr><td><img class="icon-img" src="<?php echo $u_images . 'clock.png'; ?>"> <span>Time played:</span></td><td>2h30min</td></tr>
 					</table>
 					<div class="more"><a href="<?php echo append_sid("{$phpbb_root_path}memberlist.$phpEx", 'mode=viewprofile&amp;u=' . $user->data['user_id']); ?>">More <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></a></div>
@@ -69,9 +70,12 @@ $document->addScript($scriptPath);
 					<h3>Other:</h3>
 					<ul>
 						<li><a href="<?php echo $u_profile; ?>">User Control Panel</a></li>
+						<?php if($auth->acl_get('a_') && !empty($user->data['is_registered'])) echo '<li><a href="' . append_sid("{$phpbb_root_path}adm/index.$phpEx", false, true, $user->session_id) .'">phpBB Administration Control Panel</a></li>'; ?>
+						<?php if(JFactory::getUser()->authorise('core.edit', 'com_contact')) echo '<li><a href="administrator">Joomla! Administration</a>'; ?>
+						<?php if(JFactory::getUser()->authorise('core.create', 'com_content')) echo '<li><a href="/joomla/index.php/submit-an-article">New Article</a></li>'; ?>
 						<li><a href="<?php echo $u_search_self; ?>">View your posts</a></li>
 						<li><img class="icon-img" src="<?php echo $u_images . 'coin.png'; ?>"> <a href="#">Make a donation</a></li>
-						<li><a href="<?php echo $u_logout; ?>">Logout</a></li>
+						<li><a href="/joomla/index.php/logout">Logout</a></li>
 					</ul>
 				</div>
 			</div>

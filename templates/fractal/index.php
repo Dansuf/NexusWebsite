@@ -29,7 +29,6 @@
 			Copyright (C) 2013. The design is property of Tomasz Kuczak and should not be copied. This site is powered by <a href="http://joomla.org">Joomla!</a> CMS and <a href="http://www.phpbb.com">phpBB</a> forum.
 		</footer>
 		</div>
-		<jdoc:include type="modules" name="fractal-sidebar-header"/>
 		<jdoc:include type="modules" name="fractal-sidebar"/>
 		</div>
 	</body>

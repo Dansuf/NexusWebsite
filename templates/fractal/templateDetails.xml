@@ -23,7 +23,6 @@
   			<position>position-7</position>
   			<position>search</position>
   			<position>fractal-sidebar</position>
-  			<position>fractal-sidebar-header</position>
 			<position>debug</position>
         </positions>
         <languages folder="language">
