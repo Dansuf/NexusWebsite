@@ -16,11 +16,11 @@
 	<body>
 		<div id="even-bigger-wrapper">
 		<div id="big-wrapper">
+		<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/logo_big.png" class="welcome-img"> 
 		<div id="wrapper">
 			<header>
 				<jdoc:include type="modules" name="position-1"/>
 			</header>
-			<!-- <img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/stronka.png" class="welcome-img"> -->
 			<jdoc:include type="modules" name="position-2" />
 			<jdoc:include type="modules" name="search"/>
 			<jdoc:include type="component" />

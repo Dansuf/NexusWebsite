@@ -15,6 +15,7 @@ $document->addScript($scriptPath);
 </div>
 <nav id="usr-nav">
 			<div id="usr-nav-wrap">
+				<div>
 				<div id="usr-nav-name">
 							<?php echo $avatar ?><span><?php echo $username ?></span><div class="heex"><div></div></div>
 				</div>
@@ -109,6 +110,7 @@ $document->addScript($scriptPath);
 						<li><img class="icon-img" src="<?php echo $u_images . 'coin.png'; ?>"> <a href="#">Make a donation</a></li>
 						<li><a href="/joomla/index.php/logout">Logout</a></li>
 					</ul>
+				</div>
 				</div>
 			</div>
 		</nav>  

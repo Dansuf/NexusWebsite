@@ -54,27 +54,29 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 			<?php endif; ?>
 			</span>
 		<?php endif;?>
-		<?php if($params->get('show_publish_date') || $params->get('show_author')) : ?>
-			<span class="article-info">
-			<?php if ($params->get('show_publish_date')) : ?>
-				<?php echo JHtml::_('date', $this->item->publish_up, JText::_('DATE_FORMAT_LC2')); ?>
-			<?php endif; ?>
-			<?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
-				<?php $author =  $this->item->author; ?>
-				<?php $author = ($this->item->created_by_alias ? $this->item->created_by_alias : $author);?>
-
-				<?php if (!empty($this->item->contactid ) &&  $params->get('link_author') == true):?>
-					<?php 	echo JText::sprintf('COM_CONTENT_WRITTEN_BY' ,
-					 JHtml::_('link', JRoute::_('index.php?option=com_contact&view=contact&id='.$this->item->contactid), $author)); ?>
-
-				<?php else :?>
-					<?php echo JText::sprintf('TMPL_FRACTAL_BY', $author); ?>
-				<?php endif; ?>
-			<?php endif; ?>
-			</span>
-		<?php endif;?>
+		
 	</header>
 <?php endif; ?>
+
+<?php if($params->get('show_publish_date') || $params->get('show_author')) : ?>
+	<span class="article-info">
+	<?php if ($params->get('show_publish_date')) : ?>
+		<?php echo JHtml::_('date', $this->item->publish_up, JText::_('DATE_FORMAT_LC2')); ?>
+	<?php endif; ?>
+	<?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
+		<?php $author =  $this->item->author; ?>
+		<?php $author = ($this->item->created_by_alias ? $this->item->created_by_alias : $author);?>
+
+		<?php if (!empty($this->item->contactid ) &&  $params->get('link_author') == true):?>
+			<?php 	echo JText::sprintf('COM_CONTENT_WRITTEN_BY' ,
+			 JHtml::_('link', JRoute::_('index.php?option=com_contact&view=contact&id='.$this->item->contactid), $author)); ?>
+
+		<?php else :?>
+			<?php echo JText::sprintf('TMPL_FRACTAL_BY', $author); ?>
+		<?php endif; ?>
+	<?php endif; ?>
+	</span>
+<?php endif;?>
 
 <?php  if (!$params->get('show_intro')) :
 	echo $this->item->event->afterDisplayTitle;

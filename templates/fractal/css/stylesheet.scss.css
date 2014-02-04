@@ -88,10 +88,6 @@ select:focus {
  */
 #wrapper > header {
   height: 70px;
-  /*background: #fff;
-  @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
-  @include text-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
-  border-bottom: 2px solid $main-colour;*/
   position: absolute;
   top: 0;
   overflow: hidden;
@@ -179,18 +175,19 @@ select:focus {
 #usr-nav-reference {
   transition: width 0.25s;
   transition-timing-function: cubil-bezier(0, 0.5, 1, 0.5);
-  width: 255px;
+  width: 275px;
   height: 40px;
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 101; }
+  z-index: 101;
+  overflow: hidden; }
   #usr-nav-reference .hex {
     transition: margin-left 0.25s;
     transition-timing-function: cubil-bezier(0, 0.5, 1, 0.5);
     width: 255px;
     height: 40px;
-    margin-left: 10px; }
+    margin-left: 30px; }
     #usr-nav-reference .hex > div {
       width: 250px;
       height: 100%;
@@ -214,7 +211,7 @@ select:focus {
     border-bottom: 20px solid transparent;
     float: left; }
   #usr-nav-reference .hex:hover {
-    margin-left: 0px;
+    margin-left: 20px;
     padding-top: 0;
     cursor: pointer; }
     #usr-nav-reference .hex:hover > div {
@@ -255,8 +252,9 @@ select:focus {
 
 #big-wrapper {
   width: 100%;
-  height: calc(100% - 40px);
-  padding-top: 40px;
+  /* height: calc(100% - 40px);*/
+  height: 100%;
+  /* padding-top: 40px; */
   min-width: 850px; }
 
 #wrapper {
@@ -266,7 +264,8 @@ select:focus {
   margin: 0 auto; }
 
 .welcome-img {
-  padding-bottom: 10px;
+  border-bottom: 5px solid #088a08;
+  margin-bottom: 10px;
   width: 100%; }
 
 .breadcrumbs {
@@ -300,7 +299,7 @@ select:focus {
   .article header {
     color: #088a08;
     border-bottom: 1px solid #088a08;
-    position: relative; }
+    margin-bottom: 0.3em; }
   .article header a {
     text-decoration: none;
     color: inherit; }
@@ -336,17 +335,16 @@ select:focus {
   padding-left: 10px; }
 
 .modified {
-  color: #088a08;
   font-size: 1em;
   padding-bottom: 10px;
   padding-top: 2px; }
 
 .article-info {
-  float: right;
+  display: block;
   font-size: 1em;
-  position: absolute;
-  right: 0;
-  bottom: 0; }
+  line-height: 1.2em;
+  margin-bottom: 0.6em;
+  padding-bottom: 5px; }
 
 .readmore {
   padding-top: 10px; }
@@ -354,6 +352,7 @@ select:focus {
     font-weight: bold; }
 
 .pagination {
+  clear: both;
   padding: 20px 0; }
   .pagination .right {
     float: right; }
@@ -501,23 +500,29 @@ select:focus {
  * User sidebar
  */
 #usr-nav {
-  transition: margin-right 0.25s;
+  transition: width 0.25s;
   transition-timing-function: cubil-bezier(0, 0.5, 1, 0.5);
-  width: 250px;
+  width: 0;
   height: 100%;
   z-index: 100;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   position: absolute;
   /*display: none;*/
   top: 0;
-  right: -250px;
-  margin-right: 0px;
+  right: 0;
+  /* right: -250px;
+  margin-right: 0px; */
   background: #4f4f4f;
   -webkit-box-shadow: -1px 0 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: -1px 0 1px rgba(0, 0, 0, 0.1);
   -o-box-shadow: -1px 0 1px rgba(0, 0, 0, 0.1);
   box-shadow: -1px 0 1px rgba(0, 0, 0, 0.1);
   color: #c9c9c9; }
+  #usr-nav hr {
+    width: 100%;
+    border: 0;
+    height: 1px; }
 
 #usr-nav-name {
   position: relative; }
@@ -559,11 +564,6 @@ select:focus {
 #usr-nav-name:hover .heex {
   margin-right: 10px; }
 
-#usr-nav hr {
-  width: 100%;
-  border: 0;
-  height: 1px; }
-
 .sep {
   border: 0 none #FFFFFF;
   height: 1px;
@@ -577,7 +577,12 @@ select:focus {
   box-shadow: 0 1px 1px rgba(255, 255, 255, 0.05); }
 
 #usr-nav-wrap {
-  padding: 0 10px; }
+  width: 250px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden; }
+  #usr-nav-wrap > div {
+    padding: 0 10px; }
 
 .usr-nav-section {
   padding: 10px 0;

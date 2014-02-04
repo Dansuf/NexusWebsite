@@ -141,10 +141,6 @@ select:focus
 #wrapper>header 
 {
 	height: 70px;
-	/*background: #fff;
-	@include box-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
-	@include text-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
-	border-bottom: 2px solid $main-colour;*/
 	position: absolute;
 	top: 0;
 	overflow: hidden;
@@ -266,12 +262,13 @@ select:focus
 {
 	transition: width 0.25s;
 	transition-timing-function: cubil-bezier(0,0.5,1,0.5);
-	width: 255px;
+	width: 275px;
 	height: 40px;
 	position: absolute;
 	top: 0;
 	right: 0;
 	z-index: 101;
+	overflow: hidden;
 	
 	.hex
 	{
@@ -279,7 +276,7 @@ select:focus
 		transition-timing-function: cubil-bezier(0,0.5,1,0.5);
   		width: 255px;
    		height: 40px;
-    	margin-left: 10px;
+    	margin-left: 30px;
     	
     	> div
 		{
@@ -313,7 +310,7 @@ select:focus
 
 	.hex:hover
 	{
-		margin-left: 0px;
+		margin-left: 20px;
 		padding-top: 0;
 		cursor: pointer;
 		
@@ -373,8 +370,8 @@ select:focus
 #big-wrapper
 {
 	width: 100%;
-	height: calc(100% - 40px);
-	padding-top: 40px;
+	/* height: calc(100% - 40px);*/ height: 100%;
+	/* padding-top: 40px; */
 	min-width: 850px;
 }
 
@@ -388,7 +385,8 @@ select:focus
 
 .welcome-img
 {
-	padding-bottom: 10px;
+	border-bottom: 5px solid $main-colour;
+	margin-bottom: 10px;
 	width: 100%;
 }
 
@@ -433,7 +431,7 @@ select:focus
 	{
 		color: $main-colour;
 		border-bottom: 1px solid $main-colour;
-		position: relative;
+		margin-bottom: 0.3em;
 	}
 	
 	header a
@@ -489,7 +487,6 @@ select:focus
 
 .modified
 {
-	color: $main-colour;
 	font-size: 1em;
 	padding-bottom: 10px;
 	padding-top: 2px;
@@ -497,11 +494,11 @@ select:focus
 
 .article-info
 {
-	float: right;
+	display: block;
 	font-size: 1em;
-	position: absolute;
-	right: 0;
-	bottom: 0;
+	line-height: 1.2em;
+	margin-bottom: 0.6em;
+	padding-bottom: 5px;
 }
 
 .readmore 
@@ -516,6 +513,7 @@ select:focus
 
 .pagination
 {
+	clear: both;
 	padding: 20px 0;
 	
 	.right
@@ -781,20 +779,28 @@ select:focus
  */
  
 #usr-nav {
-	transition: margin-right 0.25s;
+	transition: width 0.25s;
 	transition-timing-function: cubil-bezier(0,0.5,1,0.5);
-	width: 250px;
+	width: 0;
 	height: 100%; 
 	z-index: 100;
-	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
 	position: absolute;
 	/*display: none;*/
 	top: 0;
-	right: -250px;
-	margin-right: 0px;
+	right: 0;
+	/* right: -250px;
+	margin-right: 0px; */
 	background: #4f4f4f;
 	@include box-shadow(-1px 0 1px rgba(0, 0, 0, 0.1));
 	color: #c9c9c9;
+	
+	hr {
+		width: 100%;
+		border: 0;
+		height: 1px;
+	}
 }
 
 #usr-nav-name
@@ -850,12 +856,6 @@ select:focus
 	margin-right: 10px;
 }
 
-#usr-nav hr {
-	width: 100%;
-	border: 0;
-	height: 1px;
-}
-
 .sep {
 	border: 0 none #FFFFFF;
 	height: 1px;
@@ -867,7 +867,14 @@ select:focus
 }
 
 #usr-nav-wrap {
-	padding: 0 10px;
+	width: 250px;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	> div
+	{
+		padding: 0 10px;
+	}
 }
 
 .usr-nav-section {
