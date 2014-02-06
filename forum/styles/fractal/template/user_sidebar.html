@@ -13,11 +13,11 @@
 				<!-- IF .friends_online or .friends_offline -->
 
 				<!-- BEGIN friends_online -->
-				<li class="friend-online" title="{L_FRIENDS_ONLINE}">{friends_online.USERNAME_FULL} <!-- IF S_SHOW_PM_BOX --> <input type="submit" name="add_to[{friends_online.USER_ID}]" value="{L_ADD}" class="button2" /><!-- ENDIF --></li>
+				<li class="friend-online" title="{L_FRIENDS_ONLINE}">{friends_online.USERNAME_FULL}</li>
 				<!-- END friends_online -->
 
 				<!-- BEGIN friends_offline -->
-				<li class="friend-offline" title="{L_FRIENDS_OFFLINE}">{friends_offline.USERNAME_FULL} <!-- IF S_SHOW_PM_BOX --><input type="submit" name="add_to[{friends_offline.USER_ID}]" value="{L_ADD}" class="button2" /><!-- ENDIF --></li>
+				<li class="friend-offline" title="{L_FRIENDS_OFFLINE}">{friends_offline.USERNAME_FULL}</li>
 				<!-- END friends_offline -->
 				<!-- ELSE -->
 				{S_NO_FRIENDS}

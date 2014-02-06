@@ -104,14 +104,12 @@ if ($user->data['user_id'] != ANONYMOUS)
 		
 		if($which)
 		{
-			$friends_online[] = '<li style="color: #'. get_username_string('colour', $row['user_id'], $row['username'], $row['user_colour'])
-			. '"><img class="icon-img" src="' . $u_images . 'online.png "> <span>' . get_username_string('full', $row['user_id'], $row['username'], $row['user_colour'])
+			$friends_online[] = '<li><img class="icon-img" src="' . $u_images . 'online.png "> <span><a href="' . get_username_string('profile', $row['user_id'], $row['username'], $row['user_colour']) . '">' . $row['username'] . '</a>'
 			. "</span></li>";
 		}
 		else
 		{
-			$friends_offline[] = '<li style="color: #'. get_username_string('colour', $row['user_id'], $row['username'], $row['user_colour'])
-			. '"><img class="icon-img" src="' . $u_images . 'offline.png "> <span>' . get_username_string('full', $row['user_id'], $row['username'], $row['user_colour'])
+			$friends_offline[] = '<li><img class="icon-img" src="' . $u_images . 'offline.png "> <span><a href="' . get_username_string('profile', $row['user_id'], $row['username'], $row['user_colour']) . '">' . $row['username'] . '</a>'
 			. "</span></li>";
 		}
 		
@@ -146,11 +144,11 @@ if ($user->data['user_id'] != ANONYMOUS)
 	
 }
 
-$charImage = JURI::base() . 'images/char.png';
 $warningImage = JURI::base() . 'images/Warning.png';
 $scriptPath =  JURI::base().'modules/'.$module->module.'/scripts/main.js';
 $username = $user->data['username'];
 $avatar = get_user_avatar($user->data['user_avatar'], $user->data['user_avatar_type'], $user->data['user_avatar_width'], $user->data['user_avatar_height'], 'USER_AVATAR', true);
+if($avatar=="") $avatar= '<img src="' . JURI::base() . 'images/char.png">';
 
 require( JModuleHelper::getLayoutPath( 'mod_fractalsidebar' ) );
 ?>

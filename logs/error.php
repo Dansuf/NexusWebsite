@@ -60,3 +60,44 @@
 2014-02-01	16:35:26	INFO	127.0.0.1	 FAILURE: 	Invalid password
 2014-02-03	18:47:50	INFO	127.0.0.1	 FAILURE: 	Invalid password
 2014-02-03	20:46:40	INFO	127.0.0.1	 FAILURE: 	User does not exist
+2014-02-06	14:35:06	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:20:01	INFO	127.0.0.1	 FAILURE: 	User does not exist
+2014-02-06	16:20:02	INFO	127.0.0.1	 FAILURE: 	User does not exist
+2014-02-06	16:20:03	INFO	127.0.0.1	 FAILURE: 	User does not exist
+2014-02-06	16:21:39	INFO	127.0.0.1	 FAILURE: 	User does not exist
+2014-02-06	16:23:57	INFO	127.0.0.1	 FAILURE: 	User does not exist
+2014-02-06	16:24:48	INFO	127.0.0.1	 FAILURE: 	User does not exist
+2014-02-06	16:26:42	INFO	127.0.0.1	 FAILURE: 	User does not exist
+2014-02-06	16:30:34	INFO	127.0.0.1	 FAILURE: 	User does not exist
+2014-02-06	16:31:05	INFO	127.0.0.1	 FAILURE: 	Empty password not allowed
+2014-02-06	16:31:11	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:33:12	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:33:35	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:36:07	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:36:59	INFO	127.0.0.1	 FAILURE: 	User does not exist
+2014-02-06	16:37:17	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:41:05	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:41:41	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:41:52	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:42:09	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:42:15	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:43:00	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:43:22	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:43:46	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:44:10	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:44:27	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:52:33	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:53:12	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:53:26	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:53:56	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:54:02	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:55:06	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:55:13	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:55:31	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:59:49	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	16:59:51	INFO	127.0.0.1	 FAILURE: 	Empty password not allowed
+2014-02-06	16:59:55	INFO	127.0.0.1	 FAILURE: 	User does not exist
+2014-02-06	17:20:24	INFO	83.11.47.58	 FAILURE: 	User does not exist
+2014-02-06	17:20:28	INFO	83.11.47.58	 FAILURE: 	User does not exist
+2014-02-06	17:20:35	INFO	83.11.47.58	 FAILURE: 	Invalid password
+2014-02-06	17:21:03	INFO	127.0.0.1	 FAILURE: 	Invalid password

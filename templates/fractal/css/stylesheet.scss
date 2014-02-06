@@ -22,6 +22,16 @@ $main-colour: #088A08;
 	text-shadow: $shadow;
 }
 
+@mixin user-select($select)
+{
+	-webkit-touch-callout: $select;
+	-webkit-user-select: $select;
+	-khtml-user-select: $select;
+	-moz-user-select: $select;
+	-ms-user-select: $select;
+	user-select: $select;
+}
+
 * 
 {
 	margin: 0;
@@ -150,6 +160,7 @@ select:focus
 
 .hex
 {
+	@include user-select(none);
 	transition: padding-top 0.25s;
 	transition-timing-function: cubil-bezier(0,0.5,1,0.5);
     width: 60px;
@@ -378,25 +389,40 @@ select:focus
 #wrapper 
 {
 	width: 80%;
-	padding-top: 20px;
-	min-height: calc(100% - 80px);
+	padding-top: 5px;
+	min-height: calc(100% - 420px); /* Full height of the logo image and the footer */
 	margin: 0 auto;
 }
 
 .welcome-img
 {
-	border-bottom: 5px solid $main-colour;
-	margin-bottom: 10px;
+	display: table;
 	width: 100%;
+	font-size: 100px;
+	color: white;
+	background-position: center 0;
+	background-repeat: no-repeat;
+	border-bottom: 5px solid $main-colour;
+	height: 350px;
+	margin: 0 auto;
+	
+	div
+	{
+		width: 100%;
+		text-align: center;
+		display: table-cell;
+		height: 350px;
+		vertical-align: middle;
+		@include text-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+	}
 }
-
 .breadcrumbs
 {
 	float: left;
 	color: $main-colour;
 	font-size: 1.1em;
 	line-height: 2.2em;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 }
 
 #big-wrapper>footer
@@ -411,6 +437,40 @@ select:focus
 	text-align: center;
 }
 
+/*-----------------*/
+/* System messages */
+/*-----------------*/
+
+#system-message
+{
+	clear: both;
+	
+	> dd
+	{
+		text-indent: 0;
+	}
+	
+	> dd > ul
+	{
+	}
+	
+	 >.error > ul
+	{
+		background-image: none;
+		border: none;
+	}
+}
+
+.error.message.fade
+{
+	list-style-type: none;
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 18px;
+}
+
+
 /*----------*/
 /* Articles */
 /*----------*/
@@ -418,7 +478,7 @@ select:focus
 .search-box
 {
 	float: right;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 	font-size: 1.1em;
 }
 
@@ -447,6 +507,8 @@ select:focus
 		font-size: 1.3em;
 		line-height: 1.4em;
 		color: #333333;
+		text-indent: 25px;
+		padding-top: 1em;
 	}
 	
 }
@@ -488,7 +550,6 @@ select:focus
 .modified
 {
 	font-size: 1em;
-	padding-bottom: 10px;
 	padding-top: 2px;
 }
 
@@ -497,7 +558,6 @@ select:focus
 	display: block;
 	font-size: 1em;
 	line-height: 1.2em;
-	margin-bottom: 0.6em;
 	padding-bottom: 5px;
 }
 
@@ -684,7 +744,7 @@ select:focus
 		color: $main-colour;
 		font-weight: bold;
 		font-size: 1.1em;
-		margin-bottom: 15px;
+		margin: 15px 0 10px 0;
 	}
 	
 	.formelm
