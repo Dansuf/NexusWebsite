@@ -21,14 +21,14 @@ $document->addScript($scriptPath);
 				</div>
 				<hr class="sep">
 				<div class="usr-nav-section">
-					<h3>Notifications:</h3>
+					<h3><?php echo JText::_('TMPL_FRACTAL_NOTIFICATIONS'); ?>:</h3>
 					<ul>
 						<li><img class="icon-img" src="<?php echo $u_images . 'envelope.png'; ?>"> <a href="<?php echo $u_privatemsgs; ?>"><?php echo $l_privmsgs_text; ?></a></li>
 					</ul>
 				</div>
 				<hr class="sep">
 				<div class="usr-nav-section">
-					<h3><img src="<?php echo $u_images . 'friends.png'; ?>"> <span>Friends:</span></h3>
+					<h3><img src="<?php echo $u_images . 'friends.png'; ?>"> <span><?php echo JText::_('TMPL_FRACTAL_FRIENDS'); ?>:</span></h3>
 					<ul>
 						<?php 
 						if($friends_online || $friends_offline)
@@ -74,41 +74,41 @@ $document->addScript($scriptPath);
 							}
 						}
 						else
-							echo "You have no friends";
+							echo JText::_('TMPL_FRACTAL_NO_FRIENDS');
 						?>
-						<li class="more"><a href="<?php echo $u_friend; ?>">More <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></a></li>
+						<li class="more"><a href="<?php echo $u_friend; ?>"><?php echo JText::_('TMPL_FRACTAL_MORE'); ?> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></a></li>
 					</ul>
 				</div>
 				<hr class="sep">
 				<div class="usr-nav-section">
-					<h3>Profile:</h3>
+					<h3><?php echo JText::_('TMPL_FRACTAL_PROFILE'); ?>:</h3>
 					<table>
-						<tr><td><img class="icon-img" src="<?php echo $u_images . 'coin.png'; ?>"> <span>Coins:</span></td><td><?php echo $coins; ?></td></tr>
-						<tr><td><img class="icon-img" src="<?php echo $u_images . 'clock.png'; ?>"> <span>Time played:</span></td><td>2h30min</td></tr>
+						<tr><td><img class="icon-img" src="<?php echo $u_images . 'coin.png'; ?>"> <span><?php echo JText::_('TMPL_FRACTAL_COINS'); ?>:</span></td><td><?php echo $coins; ?></td></tr>
+						<tr><td><img class="icon-img" src="<?php echo $u_images . 'clock.png'; ?>"> <span><?php echo JText::_('TMPL_FRACTAL_TIME_PLAYED'); ?>:</span></td><td>2h30min</td></tr>
 					</table>
-					<div class="more"><a href="<?php echo append_sid("{$phpbb_root_path}memberlist.$phpEx", 'mode=viewprofile&amp;u=' . $user->data['user_id']); ?>">More <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></a></div>
+					<div class="more"><a href="<?php echo append_sid("{$phpbb_root_path}memberlist.$phpEx", 'mode=viewprofile&amp;u=' . $user->data['user_id']); ?>"><?php echo JText::_('TMPL_FRACTAL_MORE'); ?> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></a></div>
 				</div>
 				<hr class="sep">
 				<div class="usr-nav-section">
-					<h3><img src="<?php echo $u_images . 'stats.png'; ?>"> <span>Stats:</span></h3>
+					<h3><img src="<?php echo $u_images . 'stats.png'; ?>"> <span><?php echo JText::_('TMPL_FRACTAL_STATS'); ?>:</span></h3>
 					<ul>
 						<li>Heroes <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
 						<li>Craftplay <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
 						<li>Bananacraft <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
-						<li class="more">More <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
+						<li class="more"><?php echo JText::_('TMPL_FRACTAL_MORE'); ?> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
 					</ul>
 				</div>
 				<hr class="sep">
 				<div class="usr-nav-section">
-					<h3>Other:</h3>
+					<h3><?php echo JText::_('TMPL_FRACTAL_OTHER'); ?>:</h3>
 					<ul>
-						<li><a href="<?php echo $u_profile; ?>">User Control Panel</a></li>
-						<?php if($auth->acl_get('a_') && !empty($user->data['is_registered'])) echo '<li><a href="' . append_sid("{$phpbb_root_path}adm/index.$phpEx", false, true, $user->session_id) .'">phpBB Administration Control Panel</a></li>'; ?>
-						<?php if(JFactory::getUser()->authorise('core.edit', 'com_contact')) echo '<li><a href="administrator">Joomla! Administration</a>'; ?>
-						<?php if(JFactory::getUser()->authorise('core.create', 'com_content')) echo '<li><a href="/joomla/index.php/submit-an-article">New Article</a></li>'; ?>
-						<li><a href="<?php echo $u_search_self; ?>">View your posts</a></li>
-						<li><img class="icon-img" src="<?php echo $u_images . 'coin.png'; ?>"> <a href="#">Make a donation</a></li>
-						<li><a href="/joomla/index.php/logout">Logout</a></li>
+						<li><a href="<?php echo $u_profile; ?>"><?php echo JText::_('TMPL_FRACTAL_UCP'); ?></a></li>
+						<?php if($auth->acl_get('a_') && !empty($user->data['is_registered'])) echo '<li><a href="' . append_sid("{$phpbb_root_path}adm/index.$phpEx", false, true, $user->session_id) .'">' . JText::_('TMPL_FRACTAL_ACP') . '</a></li>'; ?>
+						<?php if(JFactory::getUser()->authorise('core.edit', 'com_contact')) echo '<li><a href="administrator">' . JText::_('TMPL_FRACTAL_JOOMLA_ADMIN') . '</a>'; ?>
+						<?php if(JFactory::getUser()->authorise('core.create', 'com_content')) echo '<li><a href="/joomla/index.php/submit-an-article">' . JText::_('TMPL_FRACTAL_NEW_ARTICLE') . '</a></li>'; ?>
+						<li><a href="<?php echo $u_search_self; ?>"><?php echo JText::_('TMPL_FRACTAL_POSTS'); ?></a></li>
+						<li><img class="icon-img" src="<?php echo $u_images . 'coin.png'; ?>"> <a href="#"><?php echo JText::_('TMPL_FRACTAL_DONATE'); ?></a></li>
+						<li><a href="/joomla/index.php/logout"><?php echo JText::_('TMPL_FRACTAL_LOGOUT'); ?></a></li>
 					</ul>
 				</div>
 				</div>

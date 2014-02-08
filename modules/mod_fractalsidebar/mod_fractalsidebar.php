@@ -21,7 +21,7 @@ $friends_online = [];
 $friends_offline = [];
 $coins;
 
-$u_images = JURI::base() . 'images/';
+$u_images = 'media/mod_fractalsidebar/images/';
 
 define('MAX_FRIENDS',5); // Max number of friends in friends list
 
@@ -145,7 +145,7 @@ if ($user->data['user_id'] != ANONYMOUS)
 }
 
 $warningImage = JURI::base() . 'images/Warning.png';
-$scriptPath =  JURI::base().'modules/'.$module->module.'/scripts/main.js';
+$scriptPath =  'modules/'.$module->module.'/scripts/main.js';
 $username = $user->data['username'];
 $avatar = get_user_avatar($user->data['user_avatar'], $user->data['user_avatar_type'], $user->data['user_avatar_width'], $user->data['user_avatar_height'], 'USER_AVATAR', true);
 if($avatar=="") $avatar= '<img src="' . JURI::base() . 'images/char.png">';

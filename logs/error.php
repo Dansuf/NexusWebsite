@@ -101,3 +101,5 @@
 2014-02-06	17:20:28	INFO	83.11.47.58	 FAILURE: 	User does not exist
 2014-02-06	17:20:35	INFO	83.11.47.58	 FAILURE: 	Invalid password
 2014-02-06	17:21:03	INFO	127.0.0.1	 FAILURE: 	Invalid password
+2014-02-06	20:35:51	INFO	127.0.0.1	 FAILURE: 	User does not exist
+2014-02-06	22:43:14	INFO	192.168.1.14	 FAILURE: 	Invalid password
