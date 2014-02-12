@@ -286,7 +286,7 @@ select:focus
 
 #usr-nav-reference
 {
-	transition: width 0.25s;
+	/*transition: width 0.25s;*/
 	transition-timing-function: cubil-bezier(0,0.5,1,0.5);
 	width: 275px;
 	height: 40px;
@@ -385,7 +385,7 @@ select:focus
 
 #even-bigger-wrapper
 {
-	transition: width 0.25s;
+	/*transition: width 0.25s; */
 	transition-timing-function: cubil-bezier(0,0.5,1,0.5);
 	width: 100%;
 	height: 100%;
@@ -880,7 +880,7 @@ select:focus
  */
  
 #usr-nav {
-	transition: width 0.25s;
+	/*transition: width 0.25s;*/
 	transition-timing-function: cubil-bezier(0,0.5,1,0.5);
 	width: 0;
 	height: 100%; 

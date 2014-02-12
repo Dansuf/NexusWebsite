@@ -145,10 +145,8 @@ if ($user->data['user_id'] != ANONYMOUS)
 }
 
 $warningImage = JURI::base() . 'images/Warning.png';
-$scriptPath =  'modules/'.$module->module.'/scripts/main.js';
 $username = $user->data['username'];
 $avatar = get_user_avatar($user->data['user_avatar'], $user->data['user_avatar_type'], $user->data['user_avatar_width'], $user->data['user_avatar_height'], 'USER_AVATAR', true);
-if($avatar=="") $avatar= '<img src="' . JURI::base() . 'images/char.png">';
 
 require( JModuleHelper::getLayoutPath( 'mod_fractalsidebar' ) );
 ?>

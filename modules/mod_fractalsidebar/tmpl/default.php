@@ -3,7 +3,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 
 <?php 
 $document = JFactory::getDocument();
-$document->addScript($scriptPath);
 ?>
 
 <div id="usr-nav-reference" onclick="showNav()">
@@ -21,7 +20,7 @@ $document->addScript($scriptPath);
 				</div>
 				<hr class="sep">
 				<div class="usr-nav-section">
-					<h3><?php echo JText::_('TMPL_FRACTAL_NOTIFICATIONS'); ?>:</h3>
+					<h3><img src="<?php echo $u_images . 'warning.png'; ?>"> <span><?php echo JText::_('TMPL_FRACTAL_NOTIFICATIONS'); ?>:</span></h3>
 					<ul>
 						<li><img class="icon-img" src="<?php echo $u_images . 'envelope.png'; ?>"> <a href="<?php echo $u_privatemsgs; ?>"><?php echo $l_privmsgs_text; ?></a></li>
 					</ul>
@@ -81,7 +80,7 @@ $document->addScript($scriptPath);
 				</div>
 				<hr class="sep">
 				<div class="usr-nav-section">
-					<h3><?php echo JText::_('TMPL_FRACTAL_PROFILE'); ?>:</h3>
+					<h3><img src="<?php echo $u_images . 'profile.png'; ?>"> <span><?php echo JText::_('TMPL_FRACTAL_PROFILE'); ?>:</span></h3>
 					<table>
 						<tr><td><img class="icon-img" src="<?php echo $u_images . 'coin.png'; ?>"> <span><?php echo JText::_('TMPL_FRACTAL_COINS'); ?>:</span></td><td><?php echo $coins; ?></td></tr>
 						<tr><td><img class="icon-img" src="<?php echo $u_images . 'clock.png'; ?>"> <span><?php echo JText::_('TMPL_FRACTAL_TIME_PLAYED'); ?>:</span></td><td>2h30min</td></tr>
@@ -100,17 +99,18 @@ $document->addScript($scriptPath);
 				</div>
 				<hr class="sep">
 				<div class="usr-nav-section">
-					<h3><?php echo JText::_('TMPL_FRACTAL_OTHER'); ?>:</h3>
+					<h3><img src="<?php echo $u_images . 'others.png'; ?>"> <span><?php echo JText::_('TMPL_FRACTAL_OTHER'); ?>:</span></h3>
 					<ul>
-						<li><a href="<?php echo $u_profile; ?>"><?php echo JText::_('TMPL_FRACTAL_UCP'); ?></a></li>
-						<?php if($auth->acl_get('a_') && !empty($user->data['is_registered'])) echo '<li><a href="' . append_sid("{$phpbb_root_path}adm/index.$phpEx", false, true, $user->session_id) .'">' . JText::_('TMPL_FRACTAL_ACP') . '</a></li>'; ?>
-						<?php if(JFactory::getUser()->authorise('core.edit', 'com_contact')) echo '<li><a href="administrator">' . JText::_('TMPL_FRACTAL_JOOMLA_ADMIN') . '</a>'; ?>
-						<?php if(JFactory::getUser()->authorise('core.create', 'com_content')) echo '<li><a href="/joomla/index.php/submit-an-article">' . JText::_('TMPL_FRACTAL_NEW_ARTICLE') . '</a></li>'; ?>
-						<li><a href="<?php echo $u_search_self; ?>"><?php echo JText::_('TMPL_FRACTAL_POSTS'); ?></a></li>
-						<li><img class="icon-img" src="<?php echo $u_images . 'coin.png'; ?>"> <a href="#"><?php echo JText::_('TMPL_FRACTAL_DONATE'); ?></a></li>
-						<li><a href="/joomla/index.php/logout"><?php echo JText::_('TMPL_FRACTAL_LOGOUT'); ?></a></li>
+						<li><img class="icon-img" src="<?php echo $u_images . 'ucp.png'; ?>"> <a href="<?php echo $u_profile; ?>"><?php echo JText::_('TMPL_FRACTAL_UCP'); ?></a></li>
+						<?php if($auth->acl_get('a_') && !empty($user->data['is_registered'])) echo '<li><img class="icon-img" src="' . $u_images . 'adminthing.png"> <a href="' . append_sid("{$phpbb_root_path}adm/index.$phpEx", false, true, $user->session_id) .'">' . JText::_('TMPL_FRACTAL_ACP') . '</a></li>'; ?>
+						<?php if(JFactory::getUser()->authorise('core.edit', 'com_contact')) echo '<li><img class="icon-img" src="' . $u_images . 'adminthing.png"> <a href="administrator">' . JText::_('TMPL_FRACTAL_JOOMLA_ADMIN') . '</a>'; ?>
+						<?php if(JFactory::getUser()->authorise('core.create', 'com_content')) echo '<li><img class="icon-img" src="' . $u_images . 'newarticle.png"> <a href="/joomla/index.php/submit-an-article">' . JText::_('TMPL_FRACTAL_NEW_ARTICLE') . '</a></li>'; ?>
+						<li><img class="icon-img" src="<?php echo $u_images . 'viewposts.png'; ?>"> <a href="<?php echo $u_search_self; ?>"><?php echo JText::_('TMPL_FRACTAL_POSTS'); ?></a></li>
+						<li><img class="icon-img" src="<?php echo $u_images . 'donate.png'; ?>"> <a href="#"><?php echo JText::_('TMPL_FRACTAL_DONATE'); ?></a></li>
+						<li><img class="icon-img" src="<?php echo $u_images . 'logout.png'; ?>"> <a href="/joomla/index.php/logout"><?php echo JText::_('TMPL_FRACTAL_LOGOUT'); ?></a></li>
 					</ul>
 				</div>
 				</div>
 			</div>
-		</nav>  
+		</nav> 
+		<script type="text/javascript" src="<?php echo 'modules/'.$module->module.'/scripts/main.js' ?>"></script> 
