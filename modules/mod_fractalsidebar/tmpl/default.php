@@ -8,7 +8,7 @@ $document = JFactory::getDocument();
 <div id="usr-nav-reference" onclick="showNav()">
 	<div class="hex" id="usr-nav-reference-hex">
 		<div>
-			<?php echo $avatar ?><span><?php echo $username ?></span>
+			<?php if($newNotification) echo '<img src="' . $u_images . 'warning_big.png" style="padding-right: 0;">'; echo $avatar; ?><span><?php echo $username ?></span>
 		</div>
 	</div>
 </div>

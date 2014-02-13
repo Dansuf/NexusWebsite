@@ -20,6 +20,7 @@ $user->setup('ucp');
 $friends_online = [];
 $friends_offline = [];
 $coins;
+$newNotification = false;
 
 $u_images = 'media/mod_fractalsidebar/images/';
 
@@ -51,6 +52,7 @@ if ($user->data['user_id'] != ANONYMOUS)
 					WHERE user_id = ' . $user->data['user_id'];
 				$db->sql_query($sql);
 			}
+			$newNotification = true;
 		}
 		else
 		{
