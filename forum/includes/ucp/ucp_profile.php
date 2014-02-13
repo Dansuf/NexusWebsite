@@ -594,7 +594,7 @@ class ucp_profile
 
 				$template->assign_vars(array(
 					'ERROR'			=> (sizeof($error)) ? implode('<br />', $error) : '',
-					// Warning!! The line under was commented by Dan Sufho/the Fractal team!
+					// Warning!! The line below was commented by Dan Sufho/the Fractal team!
 					//'AVATAR'		=> get_user_avatar($user->data['user_avatar'], $user->data['user_avatar_type'], $user->data['user_avatar_width'], $user->data['user_avatar_height'], 'USER_AVATAR', true),
 					'AVATAR_SIZE'	=> $config['avatar_filesize'],
 

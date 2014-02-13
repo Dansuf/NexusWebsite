@@ -1,10 +1,6 @@
 <?php // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 
-<?php 
-$document = JFactory::getDocument();
-?>
-
 <div id="usr-nav-reference" onclick="showNav()">
 	<div class="hex" id="usr-nav-reference-hex">
 		<div>

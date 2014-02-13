@@ -105,7 +105,7 @@
 	<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
 	<div class="username" onclick="toggleNav()"> 
 		<div>
-			<!-- IF AVATAR -->{AVATAR}<!-- ELSE --><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="" /><!-- ENDIF --><span<!-- IF S_USER_COLOUR -->style="font-weight: bold;color: #{S_USER_COLOUR};" <!-- ENDIF -->>{S_USERNAME}</span>
+			<!-- IF AVATAR -->{AVATAR}<!-- ELSE --><img src="../media/mod_fractalsidebar/images/char.png" alt="" /><!-- ENDIF --><span<!-- IF S_USER_COLOUR -->style="font-weight: bold;color: #{S_USER_COLOUR};" <!-- ENDIF -->>{S_USERNAME}</span>
 		</div>
 	</div>
 	<!-- ENDIF --> 
@@ -127,9 +127,8 @@
 				</form>
 			</div>
 		<!-- ENDIF --> 
-
+		
 		<div class="breadcrumbs"> 
-
 			<ul class="linklist navlinks">
 				<li class="icon-home"><a href="{U_INDEX}" accesskey="h">{L_INDEX}</a> <!-- BEGIN navlinks --> <strong>&#8249;</strong> <a href="{navlinks.U_VIEW_FORUM}">{navlinks.FORUM_NAME}</a><!-- END navlinks --></li>
 
