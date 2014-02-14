@@ -149,6 +149,7 @@ if ($user->data['user_id'] != ANONYMOUS)
 $warningImage = JURI::base() . 'images/Warning.png';
 $username = $user->data['username'];
 $avatar = get_user_avatar($user->data['user_avatar'], $user->data['user_avatar_type'], $user->data['user_avatar_width'], $user->data['user_avatar_height'], 'USER_AVATAR', true);
+$cookieIssueInfo = $params->get('cookie-issue-info');
 
 require( JModuleHelper::getLayoutPath( 'mod_fractalsidebar' ) );
 ?>

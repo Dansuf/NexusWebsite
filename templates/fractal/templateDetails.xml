@@ -5,10 +5,10 @@
         <author>Tomasz Kuczak</author>
         <authorEmail>tomasz.ks9@gmail.com</authorEmail>
         <authorUrl>http://dansuf.no-ip.biz</authorUrl>
-        <copyright>Tomasz Kuczak 2013</copyright>
+        <copyright>Tomasz Kuczak 2013-2014</copyright>
         <license>None</license>
         <version>1.0</version>
-        <description>Template for fractal website</description>
+        <description>TPL_FRACTAL_XML_DESCRIPTION</description>
         <files>
                 <filename>index.php</filename>
 				<filename>index.html</filename>
@@ -27,5 +27,6 @@
         </positions>
         <languages folder="language">
 			<language tag="en-GB">en-GB/en-GB.tpl_fractal.ini</language>
+			<language tag="en-GB">en-GB/en-GB.tpl_fractal.sys.ini</language>
 		</languages>
 </extension>

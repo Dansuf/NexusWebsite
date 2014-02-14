@@ -72,7 +72,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 			 JHtml::_('link', JRoute::_('index.php?option=com_contact&view=contact&id='.$this->item->contactid), $author)); ?>
 
 		<?php else :?>
-			<?php echo JText::sprintf('TMPL_FRACTAL_BY', $author); ?>
+			<?php echo JText::sprintf('TPL_FRACTAL_BY', $author); ?>
 		<?php endif; ?>
 	<?php endif; ?>
 	</span>

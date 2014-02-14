@@ -689,6 +689,10 @@ select:focus {
   .usr-nav-section a:link, .usr-nav-section a:visited, .usr-nav-section a:hover, .usr-nav-section a:active {
     color: #c9c9c9; }
 
+#usr-nav-cookies {
+  text-align: center;
+  display: table-cell; }
+
 .more {
   text-align: center;
   padding-top: 10px; }

@@ -113,11 +113,11 @@ function pagination_list_render($list)
 function pagination_item_active(&$item) {
 	if($item->text == "Next")
 			{
-				return "<a class=\"right\" href=\"".$item->link."\" title=\"". JText::_('TMPL_FRACTAL_OLDER') ."\">". JText::_('TMPL_FRACTAL_OLDER') ."</a>";
+				return "<a class=\"right\" href=\"".$item->link."\" title=\"". JText::_('TPL_FRACTAL_OLDER') ."\">". JText::_('TPL_FRACTAL_OLDER') ."</a>";
 			}
 	else if($item->text == "Prev")
 			{
-				return "<a class=\"left\" href=\"".$item->link."\" title=\"". JText::_('TMPL_FRACTAL_NEWER') ."\">". JText::_('TMPL_FRACTAL_NEWER') ."</a>";
+				return "<a class=\"left\" href=\"".$item->link."\" title=\"". JText::_('TPL_FRACTAL_NEWER') ."\">". JText::_('TPL_FRACTAL_NEWER') ."</a>";
 			}
 	return "<a href=\"".$item->link."\" title=\"".$item->text."\">".$item->text."</a>";
 }
