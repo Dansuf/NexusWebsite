@@ -1,11 +1,19 @@
 if(!Modernizr.canvas)
 	if(!readCookie("old_browser_info"))
 		document.getElementById("old-browser-info").style.display="list-item";
+if(!readCookie("cookie_info"))
+	document.getElementById("cookie-info").style.display="list-item";
 
 function hideOldBrowserInfo()
 {
 	createCookie("old_browser_info","1",1000);
 	document.getElementById("old-browser-info").style.display="none";
+}
+
+function hideCookieInfo()
+{
+	createCookie("cookie_info","1",1000);
+	document.getElementById("cookie-info").style.display="none";
 }
 
 
