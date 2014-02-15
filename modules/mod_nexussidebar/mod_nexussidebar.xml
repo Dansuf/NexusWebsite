@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.0" client="site" method="upgrade">
+    <name>mod_nexussidebar</name>
+    <author>Tomasz Kuczak</author>
+    <version>1.0.0</version>
+    <description>MOD_NEXUSSIDEBAR_XML_DESCRIPTION</description>
+    <files>
+        <filename>mod_nexussidebar.xml</filename>
+        <filename module="mod_nexussidebar">mod_nexussidebar.php</filename>
+        <filename>index.html</filename>
+       	<folder>tmpl</folder>
+        <folder>language</folder>
+        <folder>scripts</folder>
+    </files>
+    <languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_nexussidebar.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_nexussidebar.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+					<field name="cookie-issue-info" type="radio" default="0" label="MOD_NSIDEBAR_COOKIE_RADIO" description="MOD_NSIDEBAR_COOKIE_RADIO_DESC">
+						<option value="1">Yes</option>
+						<option value="">No</option>
+					</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

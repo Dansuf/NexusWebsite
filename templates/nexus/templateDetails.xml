@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="template">
+        <name>nexus</name>
+        <creationDate>2013-11-28</creationDate>
+        <author>Tomasz Kuczak</author>
+        <authorEmail>tomasz.ks9@gmail.com</authorEmail>
+        <authorUrl>http://dansuf.no-ip.biz</authorUrl>
+        <copyright>Tomasz Kuczak 2013-2014</copyright>
+        <license>None</license>
+        <version>1.0</version>
+        <description>TPL_NEXUS_XML_DESCRIPTION</description>
+        <files>
+                <filename>index.php</filename>
+				<filename>index.html</filename>
+                <filename>templateDetails.xml</filename>
+                <folder>images</folder>
+				<folder>html</folder>
+                <folder>css</folder>
+                <folder>scripts</folder>
+                <folder>language</folder>
+        </files>
+        <positions>
+            <position>position-1</position>
+  			<position>position-7</position>
+  			<position>search</position>
+  			<position>nexus-sidebar</position>
+			<position>debug</position>
+        </positions>
+        <languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.tpl_nexus.ini</language>
+			<language tag="en-GB">en-GB/en-GB.tpl_nexus.sys.ini</language>
+		</languages>
+</extension>
