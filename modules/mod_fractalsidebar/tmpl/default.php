@@ -12,7 +12,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 		</div>
 	</div>
 </div>
-<nav id="usr-nav">
+<div id="usr-nav">
 			<div id="usr-nav-wrap">
 				<div>
 				<?php if($user->data['user_id'] != ANONYMOUS || $cookieIssueInfo): ?>
@@ -122,5 +122,5 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 				</div>
 				</div>				
 			</div>
-		</nav> 
+		</div> 
 		<script type="text/javascript" src="<?php echo 'modules/'.$module->module.'/scripts/main.js' ?>"></script> 

@@ -86,6 +86,27 @@ hr.separator {
 p.right {
   text-align: right; }
 
+#bottom-bar {
+  position: absolute;
+  bottom: 0;
+  z-index: 200;
+  width: 100%;
+  background: #fff;
+  font-size: 1.2em; }
+  #bottom-bar ul {
+    list-style-type: none;
+    width: 100%; }
+    #bottom-bar ul li {
+      transition: display 0.25s;
+      padding: 5px;
+      border: 1px solid #333;
+      display: none; }
+  #bottom-bar span {
+    float: right;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333; }
+
 /* Main blocks
 ---------------------------------------- */
 body > header {
@@ -142,7 +163,7 @@ body > header {
   margin: 4px 0;
   clear: both; }
 
-#big-wrapper > footer {
+#footer {
   width: 80%;
   margin: 0 auto;
   clear: both;

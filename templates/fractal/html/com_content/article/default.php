@@ -33,7 +33,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
  ?>
 
 <?php if ($params->get('show_title') || $params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit || $params->get('show_publish_date') || $params->get('show_author')) : ?>
-	<header>
+	<div class="article-header">
 		<?php if ($params->get('show_title') || $params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit) : ?>
 		<span class="article-title">
 		<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
@@ -55,7 +55,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 			</span>
 		<?php endif;?>
 		
-	</header>
+	</div>
 <?php endif; ?>
 
 <?php if($params->get('show_publish_date') || $params->get('show_author')) : ?>

@@ -152,11 +152,48 @@ select:focus
 	border: 1px solid $main-colour;
 }
 
+img
+{
+	border-width: 0; /* old IE compatibility */
+}
+
+#bottom-bar
+{
+	position: absolute;
+	bottom: 0;
+	z-index: 200;
+	width: 100%;
+	background: #fff;
+	font-size: 1.2em;
+	
+	ul
+	{
+		list-style-type: none;
+		width: 100%;
+		
+		li
+		{
+			transition: display 0.25s;
+			padding: 5px;
+			border: 1px solid $main-colour;
+			display: none;
+		}
+	}
+	
+	span
+	{
+		float: right;
+		font-weight: bold;
+		cursor: pointer;
+		color: $main-colour;
+	}
+}
+
 /*
  * Top bar
  */
  
-#wrapper>header 
+#header
 {
 	transition: height 0.25s;
 	transition-timing-function: cubil-bezier(0,0.5,1,0.5);
@@ -168,7 +205,7 @@ select:focus
 	z-index: 1;
 }
 
-#wrapper>header:hover
+#header:hover
 {
 	height: 70px;
 }
@@ -430,31 +467,6 @@ select:focus
 		vertical-align: middle;
 		@include text-shadow2(0 0 20px rgba(0, 0, 0, 1),0 0 20px rgba(0, 0, 0, 0.5));
 	}
-	/*> div
-	{
-  		line-height:0px;
-  		display:table-cell;
-  		text-align: center;
-		vertical-align: middle;
- 		color:grey;
-  		font-size: 100px;
-  		-webkit-text-stroke: 1.5px grey;
-  		width: 100%;
-  		
-  		> div
-		{
-  			position:absolute;
-  			width: 100%;
-  			color: rgba(255,255,255,.8);
-  			font-size: 100px;
-  			-webkit-filter: blur(1px);
-  			display:table-cell;
-  			text-align: center;
-			vertical-align: middle;
-  			line-height:0px;
-  			-webkit-text-stroke: 0px transparent;
-		}
-	}*/
 }
 
 .breadcrumbs
@@ -466,7 +478,7 @@ select:focus
 	padding-bottom: 10px;
 }
 
-#big-wrapper>footer
+#footer
 {
 	width: 80%;
 	margin: 20px auto 0 auto;
@@ -528,19 +540,6 @@ select:focus
 	padding: 20px 0;
 	clear: both;
 	
-	header
-	{
-		color: $main-colour;
-		border-bottom: 1px solid $main-colour;
-		margin-bottom: 0.3em;
-	}
-	
-	header a
-	{
-		text-decoration: none;
-		color: inherit;
-	}
-	
 	p
 	{
 		font-family: "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
@@ -552,6 +551,20 @@ select:focus
 		padding-top: 1em;
 	}
 	
+}
+
+.article-header
+{
+	color: $main-colour;
+	border-bottom: 1px solid $main-colour;
+	margin-bottom: 0.3em;
+	clear: both; /* for old IE compatibility */
+	
+	a
+	{
+		text-decoration: none;
+		color: inherit;
+	}
 }
 
 .article-title

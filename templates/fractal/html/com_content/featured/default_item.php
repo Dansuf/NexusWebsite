@@ -19,7 +19,7 @@ $canEdit	= $this->item->params->get('access-edit');
 <div class="system-unpublished">
 <?php endif; ?>
 <?php if ($params->get('show_title') || $params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit || $params->get('show_publish_date') || $params->get('show_author')) : ?>
-	<header>
+	<div class="article-header">
 		<?php if ($params->get('show_title') || $params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit) : ?>
 		<span class="article-title">
 		<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
@@ -40,7 +40,7 @@ $canEdit	= $this->item->params->get('access-edit');
 			<?php endif; ?>
 			</span>
 		<?php endif;?>
-	</header>
+	</div>
 <?php endif; ?>
 <?php if($params->get('show_publish_date') || $params->get('show_author')) : ?>
 	<span class="article-info">

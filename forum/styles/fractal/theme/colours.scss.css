@@ -20,6 +20,12 @@ hr {
   border-color: #088a08;
   border-top-color: #088a08; }
 
+#bottom-bar ul li {
+  border-color: #088a08; }
+
+#bottom-bar span {
+  color: #088a08; }
+
 /* Main blocks
 --------------------------------------------- */
 body > header {

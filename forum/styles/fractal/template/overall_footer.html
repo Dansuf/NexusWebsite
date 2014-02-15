@@ -20,11 +20,11 @@
 </div>
 </div> 
 
-<footer>Copyright (C) 2013. The design is property of Tomasz Kuczak and should not be copied. This site is powered by <a href="http://joomla.org">Joomla!</a> CMS and <a href="http://www.phpbb.com">phpBB</a> forum.
+<div id="footer">Copyright (C) 2013. The design is property of Tomasz Kuczak and should not be copied. This site is powered by <a href="http://joomla.org">Joomla!</a> CMS and <a href="http://www.phpbb.com">phpBB</a> forum.
 		<!-- IF TRANSLATION_INFO --><br />{TRANSLATION_INFO}<!-- ENDIF -->
 		<!-- IF DEBUG_OUTPUT --><br />{DEBUG_OUTPUT}<!-- ENDIF -->
 		<!-- IF U_ACP --><br /><strong><a href="{U_ACP}">{L_ACP}</a></strong><!-- ENDIF -->
-</footer>
+</div>
 
 </div> 
 
@@ -33,6 +33,14 @@
 <!-- ENDIF -->
 
 </div>
+
+<div id="bottom-bar">
+	<ul>
+		<li id="cookie-info">This site uses cookies blah blah.<span onclick="hideCookieInfo()">X</span></li>
+		<li id="old-browser-info">It seems that you have outdated browser and the site may not work properly. Please update it to get all of this sites features. If you use Internet Explorer on Windows XP please install other browser.<span onclick="hideOldBrowserInfo()">X</span></li>
+	</ul>
+</div>
+<script type="text/javascript" src="{T_THEME_PATH}/scripts/bottomBar.js"></script> 
 
 <div>
 	<a id="bottom" name="bottom" accesskey="z"></a>
