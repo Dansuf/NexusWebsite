@@ -784,12 +784,12 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   color: inherit; }
 
 button, input[type="button"], input[type="submit"], input[type="reset"] {
-  background-color: #fff;
+  background-color: #f0f0f0;
   border-color: #088a08; }
 
-button:hover, input[type="button"]:hover {
+button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
   background-color: #088a08;
-  color: #fff; }
+  color: #f0f0f0; }
 
 /* Definition list layout for forms
 ---------------------------------------- */

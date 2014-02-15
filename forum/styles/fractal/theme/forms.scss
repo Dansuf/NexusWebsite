@@ -77,16 +77,16 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 }
 
 button, input[type="button"], input[type="submit"], input[type="reset"] {
-	background-color: #fff;
+	background-color: none;
 	border: 1px solid #333333;
-	padding: 2px;
+	padding: 3px 7px;
 }
 
-button:hover, input[type="button"]:hover {
+button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
 	border: none;
-	padding: 3px;
+	padding: 4px 8px;
 	background: #333333;
-	color: #fff;
+	color: #f0f0f0;
 	cursor: pointer;
 }
 

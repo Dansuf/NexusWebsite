@@ -99,18 +99,18 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus
 
 button, input[type="button"]
 {
-	background: #fff;
+	background: none;
 	color: $main-colour;
 	border: 1px solid $main-colour;
-	padding: 3px;
+	padding: 3px 7px;
 }
 
 button:hover, input[type="button"]:hover
 {
 	border: none;
-	padding: 4px;
+	padding: 4px 8px;
 	background: $main-colour;
-	color: #fff;
+	color: #f0f0f0;
 	cursor: pointer;
 }
 
@@ -507,14 +507,14 @@ img
 	{
 	}
 	
-	 >.error > ul
+	 >.error > ul, >.message>ul
 	{
 		background-image: none;
 		border: none;
 	}
 }
 
-.error.message.fade
+.error.message.fade, .message.message.fade
 {
 	list-style-type: none;
 	color: #000;
