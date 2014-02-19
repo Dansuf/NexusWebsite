@@ -100,7 +100,7 @@ img {
     #bottom-bar ul li {
       transition: display 0.25s;
       padding: 5px;
-      border: 1px solid #088a08;
+      border-top: 1px solid #088a08;
       display: none; }
   #bottom-bar span {
     float: right;
@@ -112,17 +112,12 @@ img {
  * Top bar
  */
 #header {
-  transition: height 0.25s;
-  transition-timing-function: cubil-bezier(0, 0.5, 1, 0.5);
-  height: 55px;
+  height: 70px;
   position: absolute;
   top: 0;
   overflow: hidden;
   font-size: 1.2em;
   z-index: 1; }
-
-#header:hover {
-  height: 70px; }
 
 .hex {
   -webkit-touch-callout: none;
@@ -131,33 +126,30 @@ img {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  transition: padding-top 0.25s;
+  transition: padding-top 0.25s, background 0.25s;
   transition-timing-function: cubil-bezier(0, 0.5, 1, 0.5);
   width: 60px;
-  height: 36px;
-  background-color: #088a08;
+  height: 30px;
+  background-color: #fff;
   position: relative; }
   .hex > div {
-    transition: background-color 0.25s;
-    transition-timing-function: cubil-bezier(0, 0.5, 1, 0.5);
+    height: 52px;
     width: 100%;
-    height: 30px;
-    top: -15px;
-    padding-top: 15px;
-    background-color: #fff;
-    position: relative; }
+    background-image: url("../images/arrow1hover.svg");
+    background-position: 0% 30px;
+    background-repeat: no-repeat; }
   .hex > div:after {
-    z-index: 1;
-    transition: border-top-color 0.25s;
+    transition: opacity 0.25s;
     transition-timing-function: cubil-bezier(0, 0.5, 1, 0.5);
     content: "";
-    width: 0;
-    top: 44.55px;
-    left: 0px;
+    width: 60px;
+    height: 52px;
+    background-image: url("../images/arrow1.svg");
+    background-position: 0% 30px;
+    background-repeat: no-repeat;
     position: absolute;
-    border-top: 17.32px solid #fff;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent; }
+    left: 0;
+    opacity: 1; }
   .hex img {
     width: 40px;
     height: 40px;
@@ -167,21 +159,11 @@ img {
     z-index: 2;
     vertical-align: top; }
 
-.hex:after {
-  content: "";
-  width: 0;
-  position: relative;
-  top: -5.25px;
-  border-top: 17.32px solid #088a08;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent; }
-
 .hex:hover {
-  padding-top: 15px; }
-  .hex:hover > div {
-    background-color: #A6D5A6; }
+  padding-top: 15px;
+  background-color: #a6d5a6; }
   .hex:hover > div:after {
-    border-top-color: #A6D5A6; }
+    opacity: 0; }
 
 .menu {
   list-style: none;
@@ -209,7 +191,6 @@ img {
     color: #fff; }
 
 #usr-nav-reference {
-  /*transition: width 0.25s;*/
   transition-timing-function: cubil-bezier(0, 0.5, 1, 0.5);
   width: 275px;
   height: 40px;
@@ -219,42 +200,27 @@ img {
   z-index: 101;
   overflow: hidden; }
   #usr-nav-reference .hex {
-    transition: margin-left 0.25s;
+    transition: margin-left 0.25s, background 0.25s;
     transition-timing-function: cubil-bezier(0, 0.5, 1, 0.5);
     width: 255px;
     height: 40px;
     margin-left: 30px; }
     #usr-nav-reference .hex > div {
-      width: 250px;
-      height: 100%;
-      margin-left: 5px; }
+      width: 271px;
+      height: 40px;
+      background-image: url("../images/arrow2hover.svg");
+      background-position: 0px 0%;
+      position: absolute;
+      left: -16px; }
     #usr-nav-reference .hex > div:after {
-      transition: border-right-color 0.25s;
-      transition-timing-function: cubil-bezier(0, 0.5, 1, 0.5);
-      height: 0;
-      left: -40px;
-      top: 15px;
-      border-right: 11.54px solid #fff;
-      border-top: 20px solid transparent;
-      border-bottom: 20px solid transparent;
-      float: left; }
-  #usr-nav-reference .hex:after {
-    height: 0;
-    left: -41px;
-    top: -55px;
-    border-right: 11.54px solid #088a08;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    float: left; }
+      width: 271px;
+      height: 40px;
+      background-image: url("../images/arrow2.svg");
+      background-position: 0px 0%; }
   #usr-nav-reference .hex:hover {
     margin-left: 20px;
     padding-top: 0;
     cursor: pointer; }
-    #usr-nav-reference .hex:hover > div {
-      background-color: #A6D5A6; }
-    #usr-nav-reference .hex:hover > div:after {
-      border-right-color: #A6D5A6;
-      border-top-color: none; }
 
 #usr-nav-name, #usr-nav-reference {
   text-align: center; }
@@ -602,43 +568,18 @@ img {
 #usr-nav-name {
   position: relative; }
   #usr-nav-name .heex {
-    transition: margin-right 0.25s;
-    transition-timing-function: cubil-bezier(0, 0.5, 1, 0.5);
-    width: 5px;
+    width: 13px;
     height: 30px;
     margin: 5px;
-    margin-right: 20px;
+    margin-right: 15px;
     position: absolute;
     top: 0;
     right: 0;
-    background: #088a08; }
-    #usr-nav-name .heex > div {
-      z-index: 1;
-      width: 0;
-      content: "";
-      margin-right: 5px;
-      border-top: 15px solid transparent;
-      border-bottom: 15px solid transparent;
-      border-left: 8.66px solid #4f4f4f;
-      position: relative;
-      float: left; }
-  #usr-nav-name .heex:after {
-    width: 0;
-    content: "";
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 8.66px solid #088a08;
-    position: relative;
-    top: -30px;
-    left: 5px;
-    float: left; }
+    background-image: url("../images/arrow3.svg"); }
 
 #usr-nav-name:hover {
   cursor: pointer;
   background: #444444; }
-
-#usr-nav-name:hover .heex > div {
-  border-left-color: #444444; }
 
 .sep {
   border: 0 none #FFFFFF;

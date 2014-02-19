@@ -175,7 +175,7 @@ img
 		{
 			transition: display 0.25s;
 			padding: 5px;
-			border: 1px solid $main-colour;
+			border-top: 1px solid $main-colour;
 			display: none;
 		}
 	}
@@ -195,9 +195,7 @@ img
  
 #header
 {
-	transition: height 0.25s;
-	transition-timing-function: cubil-bezier(0,0.5,1,0.5);
-	height: 55px;
+	height: 70px;
 	position: absolute;
 	top: 0;
 	overflow: hidden;
@@ -205,47 +203,37 @@ img
 	z-index: 1;
 }
 
-#header:hover
-{
-	height: 70px;
-}
-
 .hex
 {
 	@include user-select(none);
-	transition: padding-top 0.25s;
+	transition: padding-top 0.25s, background 0.25s;
 	transition-timing-function: cubil-bezier(0,0.5,1,0.5);
     width: 60px;
-    height: 36px;
-    background-color: #088a08;
-    position: relative;
-    
+    height: 30px;
+    background-color: #fff; 
+    position: relative;   
     > div
-	{
-		transition: background-color 0.25s;
-		transition-timing-function: cubil-bezier(0,0.5,1,0.5);
+	{	
+    	height: 52px;
     	width: 100%;
-    	height: 30px;
-    	top: -15px;
-    	padding-top: 15px;
-    	background-color: #fff;
-    	position: relative;
+    	background-image: url("../images/arrow1hover.svg");
+    	background-position: 0% 30px;
+    	background-repeat: no-repeat; 
 	}
 	
 	> div:after {
-		z-index:1;
-		transition: border-top-color 0.25s;
+		transition: opacity 0.25s;
 		transition-timing-function: cubil-bezier(0,0.5,1,0.5);
-    	content: "";
-    	width: 0;
-    	top: 44.55px;
-    	left: 0px;
-    	position: absolute;
-    	border-top: 17.32px solid #fff;
-    	border-left: 30px solid transparent;
-    	border-right: 30px solid transparent;
+		content: "";
+		width: 60px;
+		height: 52px;
+		background-image: url("../images/arrow1.svg");
+    	background-position: 0% 30px;
+    	background-repeat: no-repeat; 
+		position: absolute;
+		left: 0;
+		opacity: 1;
 	}
-	
 	img
 	{
   		width: 40px;
@@ -259,29 +247,14 @@ img
     
 }
 
-.hex:after 
-{
-    content: "";
-    width: 0;
-    position: relative;
-    top: -5.25px;
-    border-top: 17.32px solid #088a08;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-}
-
 .hex:hover
 {
 	padding-top: 15px;
-	
-	> div
-	{
-		background-color: #A6D5A6;
-	}
+	background-color: #a6d5a6;
 	
 	> div:after
 	{
-		border-top-color: #A6D5A6;
+		opacity: 0;
 	}
 }
 
@@ -323,7 +296,6 @@ img
 
 #usr-nav-reference
 {
-	/*transition: width 0.25s;*/
 	transition-timing-function: cubil-bezier(0,0.5,1,0.5);
 	width: 275px;
 	height: 40px;
@@ -335,7 +307,7 @@ img
 	
 	.hex
 	{
-		transition: margin-left 0.25s;
+		transition: margin-left 0.25s, background 0.25s;
 		transition-timing-function: cubil-bezier(0,0.5,1,0.5);
   		width: 255px;
    		height: 40px;
@@ -343,32 +315,20 @@ img
     	
     	> div
 		{
-    		width: 250px;
-    		height: 100%;
-    		margin-left: 5px;
+			width: 271px;
+			height: 40px;
+    		background-image: url("../images/arrow2hover.svg");
+    		background-position: 0px 0%;
+    		position: absolute;
+    		left: -16px;
 		}
 		> div:after 
 		{
-			transition: border-right-color 0.25s;
-			transition-timing-function: cubil-bezier(0,0.5,1,0.5);
-    		height: 0;
-    		left: -40px;
-    		top: 15px;
-    		border-right: 11.54px solid #fff;
-    		border-top: 20px solid transparent;
-    		border-bottom: 20px solid transparent;
-    		float: left;
+			width: 271px;
+			height: 40px;
+			background-image: url("../images/arrow2.svg");
+			background-position: 0px 0%;
 		}
-	}
-
-	.hex:after {
-    	height: 0;
-    	left: -41px;
-    	top: -55px;
-    	border-right: 11.54px solid #088a08;
-    	border-top: 20px solid transparent;
-    	border-bottom: 20px solid transparent;
-    	float: left;
 	}
 
 	.hex:hover
@@ -376,17 +336,6 @@ img
 		margin-left: 20px;
 		padding-top: 0;
 		cursor: pointer;
-		
-		> div
-		{
-			background-color: #A6D5A6;
-		}
-		
-		> div:after
-		{
-			border-right-color: #A6D5A6;
-			border-top-color: none;
-		}
 	}
 }
 
@@ -918,43 +867,17 @@ img
 #usr-nav-name
 {
 	position: relative;
+
 	.heex
 	{
-		transition: margin-right 0.25s;
-		transition-timing-function: cubil-bezier(0,0.5,1,0.5);
-		width: 5px;
+		width: 13px;
 		height: 30px;
 		margin: 5px;
-    	margin-right: 20px;
+    	margin-right: 15px;
     	position: absolute;
     	top: 0;
     	right: 0;
-    	background: $main-colour;
-    	> div
-		{
-			z-index: 1;
-    		width: 0;
-    		content: "";
-    		margin-right: 5px;
-    		border-top: 15px solid transparent;
-    		border-bottom: 15px solid transparent;
-    		border-left: 8.66px solid #4f4f4f;
-    		position: relative;
-    		float: left;
-		}
-	}
-	
-	.heex:after
-	{
-		width: 0;
-   		content: "";
-    	border-top: 15px solid transparent;
-    	border-bottom: 15px solid transparent;
-    	border-left: 8.66px solid #088a08;
-    	position: relative;
-    	top: -30px;
-		left: 5px;
-		float: left;
+    	background-image: url("../images/arrow3.svg");
 	}
 }
 
@@ -962,11 +885,6 @@ img
 {
 	cursor: pointer;
 	background: #444444;
-}
-
-#usr-nav-name:hover .heex>div
-{
-	border-left-color: #444444;
 }
 
 .sep {
