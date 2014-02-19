@@ -1306,7 +1306,7 @@ function get_user_avatar($avatar, $avatar_type, $avatar_width, $avatar_height, $
 	if (empty($avatar) || !$avatar_type || (!$config['allow_avatar'] && !$ignore_config))
 	{
 		// Custom edit by Dan Sufho/The Fractal team
-		return '<img src="' . $phpbb_root_path . '../media/mod_fractalsidebar/images/char.png" alt="' . ((!empty($user->lang[$alt])) ? $user->lang[$alt] : $alt) . '" />';
+		return '<img src="' . $phpbb_root_path . '../media/mod_nexussidebar/images/char.png" alt="' . ((!empty($user->lang[$alt])) ? $user->lang[$alt] : $alt) . '" />';
 	}
 
 	$avatar_img = '';

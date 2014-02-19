@@ -106,13 +106,11 @@ if ($user->data['user_id'] != ANONYMOUS)
 		
 		if($which)
 		{
-			$friends_online[] = '<li><img class="icon-img" src="' . $u_images . 'online.png "> <span><a href="' . get_username_string('profile', $row['user_id'], $row['username'], $row['user_colour']) . '">' . $row['username'] . '</a>'
-			. "</span></li>";
+			$friends_online[] = '<a href="' . get_username_string('profile', $row['user_id'], $row['username'], $row['user_colour']) . '"><li><img class="icon-img" src="' . $u_images . 'online.png "> ' . $row['username'] . '</li</a>';
 		}
 		else
 		{
-			$friends_offline[] = '<li><img class="icon-img" src="' . $u_images . 'offline.png "> <span><a href="' . get_username_string('profile', $row['user_id'], $row['username'], $row['user_colour']) . '">' . $row['username'] . '</a>'
-			. "</span></li>";
+			$friends_offline[] = '<a href="' . get_username_string('profile', $row['user_id'], $row['username'], $row['user_colour']) . '"><li><img class="icon-img" src="' . $u_images . 'offline.png "> <span>' . $row['username'] . '</span></li></a>';
 		}
 		
 		/*

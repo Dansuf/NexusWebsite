@@ -23,7 +23,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 				<div class="usr-nav-section">
 					<h3><img src="<?php echo $u_images . 'warning.png'; ?>"> <span><?php echo JText::_('MOD_NSIDEBAR_NOTIFICATIONS'); ?>:</span></h3>
 					<ul>
-						<li><img class="icon-img" src="<?php echo $u_images . 'envelope.png'; ?>"> <a href="<?php echo $u_privatemsgs; ?>"><?php echo $l_privmsgs_text; ?></a></li>
+						<a href="<?php echo $u_privatemsgs; ?>"><li><span><?php echo $l_privmsgs_text; ?></span></li></a>
 					</ul>
 				</div>
 				<hr class="sep">
@@ -74,28 +74,28 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 							}
 						}
 						else
-							echo JText::_('MOD_NSIDEBAR_NO_FRIENDS');
+							echo '<li class="nohighlight"><span>' . JText::_('MOD_NSIDEBAR_NO_FRIENDS') . '</span></li>';
 						?>
-						<li class="more"><a href="<?php echo $u_friend; ?>"><?php echo JText::_('MOD_NSIDEBAR_MORE'); ?> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></a></li>
+						<a href="<?php echo $u_friend; ?>"><li class="more"><span><?php echo JText::_('MOD_NSIDEBAR_MORE'); ?></span> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li></a>
 					</ul>
 				</div>
 				<hr class="sep">
 				<div class="usr-nav-section">
 					<h3><img src="<?php echo $u_images . 'profile.png'; ?>"> <span><?php echo JText::_('MOD_NSIDEBAR_PROFILE'); ?>:</span></h3>
 					<table>
-						<tr><td><img class="icon-img" src="<?php echo $u_images . 'coin.png'; ?>"> <span><?php echo JText::_('MOD_NSIDEBAR_COINS'); ?>:</span></td><td><?php echo $coins; ?></td></tr>
-						<tr><td><img class="icon-img" src="<?php echo $u_images . 'clock.png'; ?>"> <span><?php echo JText::_('MOD_NSIDEBAR_TIME_PLAYED'); ?>:</span></td><td>2h30min</td></tr>
+						<tr><td><span><?php echo JText::_('MOD_NSIDEBAR_COINS'); ?>:</span></td><td><?php echo $coins; ?></td></tr>
+						<tr><td><span><?php echo JText::_('MOD_NSIDEBAR_TIME_PLAYED'); ?>:</span></td><td>2h30min</td></tr>
 					</table>
-					<div class="more"><a href="<?php echo append_sid("{$phpbb_root_path}memberlist.$phpEx", 'mode=viewprofile&amp;u=' . $user->data['user_id']); ?>"><?php echo JText::_('MOD_NSIDEBAR_MORE'); ?> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></a></div>
+					<a href="<?php echo append_sid("{$phpbb_root_path}memberlist.$phpEx", 'mode=viewprofile&amp;u=' . $user->data['user_id']); ?>"><div class="more"><span><?php echo JText::_('MOD_NSIDEBAR_MORE'); ?></span> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></div></a>
 				</div>
 				<hr class="sep">
 				<div class="usr-nav-section">
 					<h3><img src="<?php echo $u_images . 'stats.png'; ?>"> <span><?php echo JText::_('MOD_NSIDEBAR_STATS'); ?>:</span></h3>
 					<ul>
-						<li>Heroes <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
-						<li>Craftplay <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
-						<li>Bananacraft <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
-						<li class="more"><?php echo JText::_('MOD_NSIDEBAR_MORE'); ?> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
+						<li><span>Heroes</span> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
+						<li><span>Craftplay</span> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
+						<li><span>Bananacraft</span> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
+						<li class="more"><span><?php echo JText::_('MOD_NSIDEBAR_MORE'); ?></span> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
 					</ul>
 				</div>
 				<?php else: ?>
@@ -104,20 +104,20 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 				</div>
 				<hr class="sep">
 				<div class="usr-nav-section">
-				<?php echo JText::_('MOD_NSIDEBAR_COOKIE_ISSUE_DESC'); ?>
+					<div class="cookie-issue"><?php echo JText::_('MOD_NSIDEBAR_COOKIE_ISSUE_DESC'); ?></div>
 				</div>
 				<?php endif ?>
 				<hr class="sep">
 				<div class="usr-nav-section">
 					<h3><img src="<?php echo $u_images . 'others.png'; ?>"> <span><?php echo JText::_('MOD_NSIDEBAR_OTHER'); ?>:</span></h3>
 					<ul>
-						<li><img class="icon-img" src="<?php echo $u_images . 'ucp.png'; ?>"> <a href="<?php echo $u_profile; ?>"><?php echo JText::_('MOD_NSIDEBAR_UCP'); ?></a></li>
-						<?php if($auth->acl_get('a_') && !empty($user->data['is_registered'])) echo '<li><img class="icon-img" src="' . $u_images . 'adminthing.png"> <a href="' . append_sid("{$phpbb_root_path}adm/index.$phpEx", false, true, $user->session_id) .'">' . JText::_('MOD_NSIDEBAR_ACP') . '</a></li>'; ?>
-						<?php if(JFactory::getUser()->authorise('core.edit', 'com_contact')) echo '<li><img class="icon-img" src="' . $u_images . 'adminthing.png"> <a href="administrator">' . JText::_('MOD_NSIDEBAR_JOOMLA_ADMIN') . '</a>'; ?>
-						<?php if(JFactory::getUser()->authorise('core.create', 'com_content')) echo '<li><img class="icon-img" src="' . $u_images . 'newarticle.png"> <a href="/joomla/index.php/submit-an-article">' . JText::_('MOD_NSIDEBAR_NEW_ARTICLE') . '</a></li>'; ?>
-						<li><img class="icon-img" src="<?php echo $u_images . 'viewposts.png'; ?>"> <a href="<?php echo $u_search_self; ?>"><?php echo JText::_('MOD_NSIDEBAR_POSTS'); ?></a></li>
-						<li><img class="icon-img" src="<?php echo $u_images . 'donate.png'; ?>"> <a href="#"><?php echo JText::_('MOD_NSIDEBAR_DONATE'); ?></a></li>
-						<li><img class="icon-img" src="<?php echo $u_images . 'logout.png'; ?>"> <a href="/joomla/index.php/logout"><?php echo JText::_('MOD_NSIDEBAR_LOGOUT'); ?></a></li>
+						<a href="<?php echo $u_profile; ?>"><li><span><?php echo JText::_('MOD_NSIDEBAR_UCP'); ?></span></li></a>
+						<?php if($auth->acl_get('a_') && !empty($user->data['is_registered'])) echo '<a href="' . append_sid("{$phpbb_root_path}adm/index.$phpEx", false, true, $user->session_id) .'"><li><span>' . JText::_('MOD_NSIDEBAR_ACP') . '</span></li></a>'; ?>
+						<?php if(JFactory::getUser()->authorise('core.edit', 'com_contact')) echo '<a href="administrator"><li><span>' . JText::_('MOD_NSIDEBAR_JOOMLA_ADMIN') . '</span></li></a>'; ?>
+						<?php if(JFactory::getUser()->authorise('core.create', 'com_content')) echo '<a href="/joomla/index.php/submit-an-article"><li><span>' . JText::_('MOD_NSIDEBAR_NEW_ARTICLE') . '</span></li></a>'; ?>
+						<a href="<?php echo $u_search_self; ?>"><li><span><?php echo JText::_('MOD_NSIDEBAR_POSTS'); ?></span></li></a>
+						<a href="#"><li><span><?php echo JText::_('MOD_NSIDEBAR_DONATE'); ?></span></li></a>
+						<a href="/joomla/index.php/logout"><li><span><?php echo JText::_('MOD_NSIDEBAR_LOGOUT'); ?></span></li></a>
 					</ul>
 				</div>
 				</div>				

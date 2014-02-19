@@ -574,7 +574,6 @@ img {
  * User sidebar
  */
 #usr-nav {
-  /*transition: width 0.25s;*/
   transition-timing-function: cubil-bezier(0, 0.5, 1, 0.5);
   width: 0;
   height: 100%;
@@ -582,11 +581,8 @@ img {
   overflow-y: auto;
   overflow-x: hidden;
   position: absolute;
-  /*display: none;*/
   top: 0;
   right: 0;
-  /* right: -250px;
-  margin-right: 0px; */
   background: #4f4f4f;
   -webkit-box-shadow: -1px 0 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: -1px 0 1px rgba(0, 0, 0, 0.1);
@@ -594,9 +590,14 @@ img {
   box-shadow: -1px 0 1px rgba(0, 0, 0, 0.1);
   color: #c9c9c9; }
   #usr-nav hr {
-    width: 100%;
-    border: 0;
-    height: 1px; }
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-rigth: 10px;
+    height: 1px;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1); }
 
 #usr-nav-name {
   position: relative; }
@@ -633,10 +634,11 @@ img {
     float: left; }
 
 #usr-nav-name:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  background: #444444; }
 
-#usr-nav-name:hover .heex {
-  margin-right: 10px; }
+#usr-nav-name:hover .heex > div {
+  border-left-color: #444444; }
 
 .sep {
   border: 0 none #FFFFFF;
@@ -655,11 +657,9 @@ img {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden; }
-  #usr-nav-wrap > div {
-    padding: 0 10px; }
 
 .usr-nav-section {
-  padding: 10px 0;
+  padding: 5px 0;
   width: 100%;
   font-size: 12px; }
   .usr-nav-section h3 {
@@ -675,26 +675,35 @@ img {
     text-align: left; }
   .usr-nav-section table {
     border-collapse: collapse;
-    margin: 10px 0 0 0; }
+    margin: 10px 10px 0 10px; }
   .usr-nav-section tr, .usr-nav-section table, .usr-nav-section tbody {
     width: 100%; }
   .usr-nav-section td {
     width: 50%; }
-  .usr-nav-section h3, .usr-nav-section li, .usr-nav-section td {
-    height: 18px; }
-    .usr-nav-section h3 span, .usr-nav-section h3 a, .usr-nav-section li span, .usr-nav-section li a, .usr-nav-section td span, .usr-nav-section td a {
-      line-height: 18px;
+  .usr-nav-section h3, .usr-nav-section li, .usr-nav-section td, .usr-nav-section div.more {
+    height: 20px; }
+    .usr-nav-section h3 span, .usr-nav-section li span, .usr-nav-section td span, .usr-nav-section div.more span {
+      line-height: 20px;
       display: inline-block;
       vertical-align: middle; }
-    .usr-nav-section h3 img, .usr-nav-section li img, .usr-nav-section td img {
+    .usr-nav-section h3 img, .usr-nav-section li img, .usr-nav-section td img, .usr-nav-section div.more img {
       padding: 1px 0;
       vertical-align: middle; }
+  .usr-nav-section li {
+    padding: 0 10px; }
+  .usr-nav-section li:hover, .usr-nav-section div.more:hover {
+    background: #444444; }
+  .usr-nav-section li.nohighlight:hover {
+    background: none; }
+  .usr-nav-section .cookie-issue {
+    padding: 0 10px; }
   .usr-nav-section a:link, .usr-nav-section a:visited, .usr-nav-section a:hover, .usr-nav-section a:active {
-    color: #c9c9c9; }
+    color: #c9c9c9;
+    text-decoration: none; }
 
 .more {
-  text-align: center;
-  padding-top: 10px; }
+  margin-top: 5px;
+  text-align: center; }
 
 .down-img {
   width: 7px;
