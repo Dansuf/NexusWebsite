@@ -21,14 +21,14 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 				</div>
 				<hr class="sep">
 				<div class="usr-nav-section">
-					<h3><img src="<?php echo $u_images . 'warning.png'; ?>"> <span><?php echo JText::_('MOD_NSIDEBAR_NOTIFICATIONS'); ?>:</span></h3>
+					<h3><img src="<?php echo $u_images . 'warning.png'; ?>"><span> <?php echo JText::_('MOD_NSIDEBAR_NOTIFICATIONS'); ?>:</span></h3>
 					<ul>
 						<a href="<?php echo $u_privatemsgs; ?>"><li><span><?php echo $l_privmsgs_text; ?></span></li></a>
 					</ul>
 				</div>
 				<hr class="sep">
 				<div class="usr-nav-section">
-					<h3><img src="<?php echo $u_images . 'friends.png'; ?>"> <span><?php echo JText::_('MOD_NSIDEBAR_FRIENDS'); ?>:</span></h3>
+					<h3><img src="<?php echo $u_images . 'friends.png'; ?>"><span> <?php echo JText::_('MOD_NSIDEBAR_FRIENDS'); ?>:</span></h3>
 					<ul>
 						<?php 
 						if($friends_online || $friends_offline)
@@ -81,7 +81,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 				</div>
 				<hr class="sep">
 				<div class="usr-nav-section">
-					<h3><img src="<?php echo $u_images . 'profile.png'; ?>"> <span><?php echo JText::_('MOD_NSIDEBAR_PROFILE'); ?>:</span></h3>
+					<h3><img src="<?php echo $u_images . 'profile.png'; ?>"><span> <?php echo JText::_('MOD_NSIDEBAR_PROFILE'); ?>:</span></h3>
 					<table>
 						<tr><td><span><?php echo JText::_('MOD_NSIDEBAR_COINS'); ?>:</span></td><td><?php echo $coins; ?></td></tr>
 						<tr><td><span><?php echo JText::_('MOD_NSIDEBAR_TIME_PLAYED'); ?>:</span></td><td>2h30min</td></tr>
@@ -90,7 +90,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 				</div>
 				<hr class="sep">
 				<div class="usr-nav-section">
-					<h3><img src="<?php echo $u_images . 'stats.png'; ?>"> <span><?php echo JText::_('MOD_NSIDEBAR_STATS'); ?>:</span></h3>
+					<h3><img src="<?php echo $u_images . 'stats.png'; ?>"><span> <?php echo JText::_('MOD_NSIDEBAR_STATS'); ?>:</span></h3>
 					<ul>
 						<li><span>Heroes</span> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
 						<li><span>Craftplay</span> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
@@ -109,7 +109,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 				<?php endif ?>
 				<hr class="sep">
 				<div class="usr-nav-section">
-					<h3><img src="<?php echo $u_images . 'others.png'; ?>"> <span><?php echo JText::_('MOD_NSIDEBAR_OTHER'); ?>:</span></h3>
+					<h3><img src="<?php echo $u_images . 'others.png'; ?>"><span> <?php echo JText::_('MOD_NSIDEBAR_OTHER'); ?>:</span></h3>
 					<ul>
 						<a href="<?php echo $u_profile; ?>"><li><span><?php echo JText::_('MOD_NSIDEBAR_UCP'); ?></span></li></a>
 						<?php if($auth->acl_get('a_') && !empty($user->data['is_registered'])) echo '<a href="' . append_sid("{$phpbb_root_path}adm/index.$phpEx", false, true, $user->session_id) .'"><li><span>' . JText::_('MOD_NSIDEBAR_ACP') . '</span></li></a>'; ?>

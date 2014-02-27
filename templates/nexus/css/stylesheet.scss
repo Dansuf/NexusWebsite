@@ -940,9 +940,13 @@ img
 	
 	h3, li, td, div.more {
 		height: 20px;
+		span {line-height: 20px}
+	}
+	
+	h3, li
+	{
 		span {
 			line-height: 20px;
-			display: inline-block;
 			vertical-align: middle;
 		}
 		

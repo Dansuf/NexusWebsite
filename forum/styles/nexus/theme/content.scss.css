@@ -264,7 +264,8 @@ div[class].topic-actions {
   border-bottom: 1px solid #CCCCCC;
   font-size: 1.6em;
   margin-top: 20px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  padding-bottom: 0.1em; }
 
 .panel h3 {
   margin: 0.5em 0; }

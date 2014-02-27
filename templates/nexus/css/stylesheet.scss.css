@@ -624,12 +624,13 @@ img {
   .usr-nav-section h3, .usr-nav-section li, .usr-nav-section td, .usr-nav-section div.more {
     height: 20px; }
     .usr-nav-section h3 span, .usr-nav-section li span, .usr-nav-section td span, .usr-nav-section div.more span {
-      line-height: 20px;
-      display: inline-block;
-      vertical-align: middle; }
-    .usr-nav-section h3 img, .usr-nav-section li img, .usr-nav-section td img, .usr-nav-section div.more img {
-      padding: 1px 0;
-      vertical-align: middle; }
+      line-height: 20px; }
+  .usr-nav-section h3 span, .usr-nav-section li span {
+    line-height: 20px;
+    vertical-align: middle; }
+  .usr-nav-section h3 img, .usr-nav-section li img {
+    padding: 1px 0;
+    vertical-align: middle; }
   .usr-nav-section li {
     padding: 0 10px; }
   .usr-nav-section li:hover, .usr-nav-section div.more:hover {

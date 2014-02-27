@@ -9,6 +9,7 @@
    xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
 	<head>
 		<jdoc:include type="head" />
+		<link rel="shortcut icon" href="/favicon.ico"></link>
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/general.css" type="text/css" />
 		<link type="text/css" rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/stylesheet.scss.css"></link>

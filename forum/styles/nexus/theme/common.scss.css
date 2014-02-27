@@ -36,6 +36,10 @@ h2 {
   color: #3f3f3f;
   font-size: 2em;
   margin: 0.8em 0 0.2em 0; }
+  h2 > span {
+    vertical-align: middle; }
+  h2 img {
+    vertical-align: middle; }
 
 h2.solo {
   margin-bottom: 1em; }
@@ -174,6 +178,7 @@ body > header {
   text-align: center; }
 
 .simple-copyright {
+  clear: both;
   text-align: center; }
 
 #page-footer {
