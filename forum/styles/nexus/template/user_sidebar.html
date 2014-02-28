@@ -1,63 +1,75 @@
-<nav id="usr-nav">
+<div id="usr-nav-reference" onclick="showNav()">
+	<div class="hex" id="usr-nav-reference-hex">
+		<div>
+			<!-- IF S_USER_NEW_PRIVMSG --><img src="{T_IMAGESET_PATH}/warning_big.png" style="padding-right: 0;"><!-- ENDIF -->	<!-- IF AVATAR -->{AVATAR}<!-- ELSE --><img src="{T_IMAGESET_PATH}/char.png" alt="" /><!-- ENDIF --><span>{S_USERNAME}</span>
+		</div>
+	</div>
+</div>
+<div id="usr-nav">
 	<div id="usr-nav-wrap">
+		<div>
+		<div id="usr-nav-name">
+			<!-- IF AVATAR -->{AVATAR}<!-- ELSE --><img src="{T_IMAGESET_PATH}/char.png" alt="" /><!-- ENDIF --><span>{S_USERNAME}</span><div class="heex"><div></div></div>
+		</div>
+		<hr class="sep">
 		<div class="usr-nav-section">
-			<h3>Notifications:</h3>
+			<h3><img src="{T_IMAGESET_PATH}/warning.png"><span> Notifications:</span></h3>
 			<ul>
-				<!-- IF S_DISPLAY_PM --> <li><a href="{U_PRIVATEMSGS}">{PRIVATE_MESSAGE_INFO}</a></li><!-- ENDIF -->
+				<!-- IF S_DISPLAY_PM --> <a href="{U_PRIVATEMSGS}"><li><span>{PRIVATE_MESSAGE_INFO}</span></li></a><!-- ENDIF -->
 			</ul>
 		</div>
 		<hr class="sep">
 		<div class="usr-nav-section">
-			<h3>Friends:</h3>
+			<h3><img src="{T_IMAGESET_PATH}/friends.png"><span> Friends:</span></h3>
 			<ul>
 				<!-- IF .friends_online or .friends_offline -->
 
 				<!-- BEGIN friends_online -->
-				<li class="friend-online" title="{L_FRIENDS_ONLINE}">{friends_online.USERNAME_FULL}</li>
+				<a href="{friends_online.U_PROFILE}"><li><img src="{T_IMAGESET_PATH}/online.png"><span> {friends_online.USERNAME}</span></li></a>
 				<!-- END friends_online -->
 
 				<!-- BEGIN friends_offline -->
-				<li class="friend-offline" title="{L_FRIENDS_OFFLINE}">{friends_offline.USERNAME_FULL}</li>
+				<a href="{friends_offline.U_PROFILE}"><li><img src="{T_IMAGESET_PATH}/offline.png"><span> {friends_offline.USERNAME}</span></li></a>
 				<!-- END friends_offline -->
 				<!-- ELSE -->
-				{S_NO_FRIENDS}
+				<li class="nohighlight">{S_NO_FRIENDS}</li>
 				<!-- ENDIF -->
-				<li class="more"><a href="{U_FRIENDS}">More <img src="{T_THEME_PATH}/images/down.png" class="down-img"></a></li>
+				<a href="{U_FRIENDS}"><li class="more"><span>More </span><img src="{T_THEME_PATH}/images/down.png" class="down-img"></li></a>
 			</ul>
 		</div>
 		<hr class="sep">
 		<div class="usr-nav-section">
-			<h3>Profile:</h3>
+			<h3><img src="{T_IMAGESET_PATH}/profile.png"><span> Profile:</span></h3>
 			<table>
 				<tr><td>Coins:</td><td>9001</td></tr>
 				<tr><td>Time played:</td><td>2h30min</td></tr>
 			</table>
-			<div class="more">More <img src="{T_THEME_PATH}/images/down.png" class="down-img"></div>
+			<a href="{ROOT_PATH}/memberlist.php?mode=viewprofile&un={S_USERNAME}"><div class="more"><span>More </span><img src="{T_THEME_PATH}/images/down.png" class="down-img"></div></a>
 		</div>
 		<hr class="sep">
 		<div class="usr-nav-section">
-			<h3>Stats:</h3>
+			<h3><img src="{T_IMAGESET_PATH}/stats.png"><span> Stats:</span></h3>
 			<ul>
-				<li>Heroes <img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
-				<li>Craftplay <img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
-				<li>Bananacraft <img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
-				<li class="more">More <img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
+				<li><span>Heroes </span><img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
+				<li><span>Craftplay </span><img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
+				<li><span>Bananacraft </span><img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
+				<li class="more"><span>More </span><img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
 			</ul>
 		</div>
 		<hr class="sep">
 		<div class="usr-nav-section">
-			<h3>Other:</h3>
+			<h3><img src="{T_IMAGESET_PATH}/others.png"><span> Other:</span></h3>
 			<ul>
-				<li><a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e">{L_PROFILE}</a></li>
-				<!-- IF S_DISPLAY_SEARCH -->
-				<li><a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a></li>
-				<!-- ENDIF -->
+				<a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e"><li><span>{L_PROFILE}</span></li></a>
+				<!-- IF U_ACP --><a href="{U_ACP}"><li><span>{L_ACP}</span></li></a><!-- ENDIF -->
 				<!-- IF U_RESTORE_PERMISSIONS -->
-				<li><a href="{U_RESTORE_PERMISSIONS}">{L_RESTORE_PERMISSIONS}</a></li>
+				<a href="{U_RESTORE_PERMISSIONS}"><li><span>{L_RESTORE_PERMISSIONS}</span></li></a>
 				<!-- ENDIF --> 
-				<li>Make a donation</li>
-				<li><a href="{U_LOGIN_LOGOUT}" title="{S_LOGOUT}" accesskey="x">{S_LOGOUT}</a></li>
+				<a href="#"><li><span>Make a donation</span></li></a>
+				<a href="{U_LOGIN_LOGOUT}" title="{S_LOGOUT}" accesskey="x"><li><span>{S_LOGOUT}</span></li></a>
 			</ul>
+		</div>
 		</div>
 	</div>
-</nav>
+</div>
+<script type="text/javascript" src="{T_THEME_PATH}/scripts/main.js"></script> 

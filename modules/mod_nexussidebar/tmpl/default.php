@@ -76,7 +76,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 						else
 							echo '<li class="nohighlight"><span>' . JText::_('MOD_NSIDEBAR_NO_FRIENDS') . '</span></li>';
 						?>
-						<a href="<?php echo $u_friend; ?>"><li class="more"><span><?php echo JText::_('MOD_NSIDEBAR_MORE'); ?></span> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li></a>
+						<a href="<?php echo $u_friend; ?>"><li class="more"><span><?php echo JText::_('MOD_NSIDEBAR_MORE'); ?> </span><img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li></a>
 					</ul>
 				</div>
 				<hr class="sep">
@@ -92,10 +92,10 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 				<div class="usr-nav-section">
 					<h3><img src="<?php echo $u_images . 'stats.png'; ?>"><span> <?php echo JText::_('MOD_NSIDEBAR_STATS'); ?>:</span></h3>
 					<ul>
-						<li><span>Heroes</span> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
-						<li><span>Craftplay</span> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
-						<li><span>Bananacraft</span> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
-						<li class="more"><span><?php echo JText::_('MOD_NSIDEBAR_MORE'); ?></span> <img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
+						<li><span>Heroes </span><img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
+						<li><span>Craftplay </span><img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
+						<li><span>Bananacraft </span><img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
+						<li class="more"><span><?php echo JText::_('MOD_NSIDEBAR_MORE'); ?> </span><img class="down-img" src="<?php echo $u_images . 'down.png'; ?>"></li>
 					</ul>
 				</div>
 				<?php else: ?>
