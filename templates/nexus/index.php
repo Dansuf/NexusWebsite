@@ -18,7 +18,7 @@
 	<body>
 		<div id="even-bigger-wrapper">
 		<div id="big-wrapper">
-		<div style="background-image: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/logo_big.png');" class="welcome-img"><div>the Fractal Network</div></div>
+		<div style="background-image: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/logo_big.png');" class="welcome-img"><div><?php echo JText::_('TPL_NEXUS_TITLE')?></div></div>
 		<div id="wrapper">
 			<div id="header">
 				<jdoc:include type="modules" name="position-1"/>
@@ -29,7 +29,7 @@
 			<jdoc:include type="component" />
 		</div>
 		<div id="footer">
-			Copyright (C) 2013. The design is property of Tomasz Kuczak and should not be copied. This site is powered by <a href="http://joomla.org">Joomla!</a> CMS and <a href="http://www.phpbb.com">phpBB</a> forum.
+			<?php echo JText::_('TPL_NEXUS_COPYRIGHT')?>
 		</div>
 		</div>
 		<jdoc:include type="modules" name="nexus-sidebar"/>

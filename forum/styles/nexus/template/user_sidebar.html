@@ -13,14 +13,14 @@
 		</div>
 		<hr class="sep">
 		<div class="usr-nav-section">
-			<h3><img src="{T_IMAGESET_PATH}/warning.png"><span> Notifications:</span></h3>
+			<h3><img src="{T_IMAGESET_PATH}/warning.png"><span> {S_NOTIFICATIONS}:</span></h3>
 			<ul>
 				<!-- IF S_DISPLAY_PM --> <a href="{U_PRIVATEMSGS}"><li><span>{PRIVATE_MESSAGE_INFO}</span></li></a><!-- ENDIF -->
 			</ul>
 		</div>
 		<hr class="sep">
 		<div class="usr-nav-section">
-			<h3><img src="{T_IMAGESET_PATH}/friends.png"><span> Friends:</span></h3>
+			<h3><img src="{T_IMAGESET_PATH}/friends.png"><span> {S_FRIENDS}:</span></h3>
 			<ul>
 				<!-- IF .friends_online or .friends_offline -->
 
@@ -34,38 +34,38 @@
 				<!-- ELSE -->
 				<li class="nohighlight">{S_NO_FRIENDS}</li>
 				<!-- ENDIF -->
-				<a href="{U_FRIENDS}"><li class="more"><span>More </span><img src="{T_THEME_PATH}/images/down.png" class="down-img"></li></a>
+				<a href="{U_FRIENDS}"><li class="more"><span>{S_MORE} </span><img src="{T_THEME_PATH}/images/down.png" class="down-img"></li></a>
 			</ul>
 		</div>
 		<hr class="sep">
 		<div class="usr-nav-section">
-			<h3><img src="{T_IMAGESET_PATH}/profile.png"><span> Profile:</span></h3>
+			<h3><img src="{T_IMAGESET_PATH}/profile.png"><span> {S_PROFILE}:</span></h3>
 			<table>
-				<tr><td>Coins:</td><td>9001</td></tr>
-				<tr><td>Time played:</td><td>2h30min</td></tr>
+				<tr><td>{S_COINS}:</td><td>9001</td></tr>
+				<tr><td>{S_TIME_PLAYED}:</td><td>2h30min</td></tr>
 			</table>
-			<a href="{ROOT_PATH}/memberlist.php?mode=viewprofile&un={S_USERNAME}"><div class="more"><span>More </span><img src="{T_THEME_PATH}/images/down.png" class="down-img"></div></a>
+			<a href="{ROOT_PATH}/memberlist.php?mode=viewprofile&un={S_USERNAME}"><div class="more"><span>{S_MORE} </span><img src="{T_THEME_PATH}/images/down.png" class="down-img"></div></a>
 		</div>
 		<hr class="sep">
 		<div class="usr-nav-section">
-			<h3><img src="{T_IMAGESET_PATH}/stats.png"><span> Stats:</span></h3>
+			<h3><img src="{T_IMAGESET_PATH}/stats.png"><span> {S_STATS}:</span></h3>
 			<ul>
 				<li><span>Heroes </span><img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
 				<li><span>Craftplay </span><img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
 				<li><span>Bananacraft </span><img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
-				<li class="more"><span>More </span><img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
+				<li class="more"><span>{S_MORE} </span><img src="{T_THEME_PATH}/images/down.png" class="down-img"></li>
 			</ul>
 		</div>
 		<hr class="sep">
 		<div class="usr-nav-section">
-			<h3><img src="{T_IMAGESET_PATH}/others.png"><span> Other:</span></h3>
+			<h3><img src="{T_IMAGESET_PATH}/others.png"><span> {S_OTHER}:</span></h3>
 			<ul>
 				<a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e"><li><span>{L_PROFILE}</span></li></a>
-				<!-- IF U_ACP --><a href="{U_ACP}"><li><span>{L_ACP}</span></li></a><!-- ENDIF -->
+				<!-- IF U_ACP --><a href="{U_ACP}"><li><span>{S_CUSTOM_ACP}</span></li></a><!-- ENDIF -->
 				<!-- IF U_RESTORE_PERMISSIONS -->
 				<a href="{U_RESTORE_PERMISSIONS}"><li><span>{L_RESTORE_PERMISSIONS}</span></li></a>
 				<!-- ENDIF --> 
-				<a href="#"><li><span>Make a donation</span></li></a>
+				<a href="#"><li><span>{S_DONATE}</span></li></a>
 				<a href="{U_LOGIN_LOGOUT}" title="{S_LOGOUT}" accesskey="x"><li><span>{S_LOGOUT}</span></li></a>
 			</ul>
 		</div>

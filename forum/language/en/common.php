@@ -893,6 +893,29 @@ $lang = array_merge($lang, array(
 	// The default dateformat which will be used on new installs in this language
 	// Translators should change this if a the usual date format is different
 	'default_dateformat'	=> 'D M d, Y g:i a', // Mon Jan 01, 2007 1:37 pm
+	
+	// Custom values by Dan Sufho/the Fractal Team
+	'S_TITLE'				=> 'the Fractal Network',
+	'S_HOME'				=> 'Home',
+	'S_NOTIFICATIONS'		=> 'Notifications',
+	'S_FRIENDS'				=> 'Friends',
+	'S_NO_FRIENDS'			=> 'You have nobody on your friendlist.',
+	'S_PROFILE'				=> 'Profile',
+	'S_COINS'				=> 'Coins',
+	'S_TIME_PLAYED'			=> 'Time played',
+	'S_MORE'				=> 'More',
+	'S_STATS'				=> 'Stats',
+	'S_OTHER'				=> 'Other',
+	'S_UCP'					=> 'User Control Panel',
+	'S_CUSTOM_ACP'			=> 'phpBB ACP',
+	'S_POSTS'				=> 'View your posts',
+	'S_DONATE'				=> 'Make a donation',
+	'S_LOGOUT'				=> 'Log out',
+	'S_PLAYERS'				=> 'Players',
+	'S_OLD_BROWSER'			=> 'It seems that you have outdated browser and the site may not work properly. Please update it to get all of the features this site offers. If you use Internet Explorer on Windows XP or older please install other browser.',
+	'S_COOKIE_INFO'			=> 'We use cookies to improve your experience with the site. If you want to disable them please refer to your web browser\'s documentation.',
+	'S_COPYRIGHT'			=> 'Copyright (C) 2014. The design is property of the Fractal Team and should not be copied. This site is powered by <a href="http://joomla.org">Joomla!</a> CMS and <a href="http://www.phpbb.com">phpBB</a> forum.',
+	
 
 ));
 
