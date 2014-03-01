@@ -118,9 +118,10 @@ h1
 {
 	border-bottom: 1px solid $main-colour;
 	font-weight: bold;
-	font-size: 1.2em;
+	font-size: 1.6em;
 	margin-bottom: 10px;
 	color: $main-colour;
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
 }
 
 hr
@@ -695,14 +696,8 @@ img
 	fieldset
 	{
 		display: table;
-		margin: 0 auto;
 		width: 500px;
 		text-align: center;
-	}
-	
-	button
-	{
-		margin-top: 10px;
 	}
 
 }
@@ -711,20 +706,38 @@ img
 {
 	display: table-row;
 	text-align: left;
+	
+	label
+	{
+		font-weight: bold;
+		line-height: 14px;
+		color: #333;
+	}
 		
 	label, input
 	{
 		display: table-cell;
 		margin: 5px;
-		width: 250px;
+		width: 200px;
+		font-family: Verdana,Helvetica,Arial,sans-serif;
 	}
+	
+	button
+	{
+		display: table-cell;
+		margin: 5px;
+	}
+}
+
+.login-fields:hover label
+{
+	color: $main-colour;
 }
 
 .login-forgots
 {
 	list-style: none;
 	padding: 10px 0 0 0;
-	text-align: center;
 	
 	a
 	{
@@ -746,7 +759,7 @@ img
 		width: 100%;
 		color: $main-colour;
 		font-weight: bold;
-		font-size: 1.1em;
+		font-size: 1.2em;
 		margin: 15px 0 10px 0;
 	}
 	
@@ -790,6 +803,14 @@ img
 			vertical-align: middle;
 			margin-bottom: 15px;
 			min-width: 400px;
+		}
+	}
+	
+	.formelm:hover, .formelm-area:hover
+	{
+		label
+		{
+			color: $main-colour;
 		}
 	}
 	

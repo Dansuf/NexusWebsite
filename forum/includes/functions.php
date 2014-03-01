@@ -4502,7 +4502,8 @@ function page_header($page_title = '', $display_online_list = true, $item_id = 0
 	}
 	else
 	{
-		$u_login_logout = append_sid("{$phpbb_root_path}ucp.$phpEx", 'mode=login');
+		// Custom edit by Dan Sufho/the Fractal Team
+		$u_login_logout = "../index.php/login";
 		$l_login_logout = $user->lang['LOGIN'];
 	}
 

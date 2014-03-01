@@ -60,9 +60,10 @@ button:hover, input[type="button"]:hover {
 h1 {
   border-bottom: 1px solid #088a08;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.6em;
   margin-bottom: 10px;
-  color: #088a08; }
+  color: #088a08;
+  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif; }
 
 hr {
   border: 0 none #fff;
@@ -457,24 +458,31 @@ img {
   padding: 20px 0 10px 0; }
   .login fieldset {
     display: table;
-    margin: 0 auto;
     width: 500px;
     text-align: center; }
-  .login button {
-    margin-top: 10px; }
 
 .login-fields {
   display: table-row;
   text-align: left; }
+  .login-fields label {
+    font-weight: bold;
+    line-height: 14px;
+    color: #333; }
   .login-fields label, .login-fields input {
     display: table-cell;
     margin: 5px;
-    width: 250px; }
+    width: 200px;
+    font-family: Verdana,Helvetica,Arial,sans-serif; }
+  .login-fields button {
+    display: table-cell;
+    margin: 5px; }
+
+.login-fields:hover label {
+  color: #088a08; }
 
 .login-forgots {
   list-style: none;
-  padding: 10px 0 0 0;
-  text-align: center; }
+  padding: 10px 0 0 0; }
   .login-forgots a {
     font-weight: bold; }
 
@@ -488,7 +496,7 @@ img {
     width: 100%;
     color: #088a08;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin: 15px 0 10px 0; }
   #adminForm .formelm {
     display: table-row; }
@@ -512,6 +520,8 @@ img {
       vertical-align: middle;
       margin-bottom: 15px;
       min-width: 400px; }
+  #adminForm .formelm:hover label, #adminForm .formelm-area:hover label {
+    color: #088a08; }
   #adminForm p {
     padding-bottom: 15px; }
   #adminForm button {
