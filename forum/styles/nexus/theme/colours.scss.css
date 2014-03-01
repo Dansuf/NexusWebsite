@@ -28,10 +28,10 @@ hr {
 
 /* Main blocks
 --------------------------------------------- */
-body > header {
+.welcome-img {
   border-bottom-color: #088a08; }
 
-#big-wrapper > footer {
+#footer {
   border-top-color: #088a08; }
 
 /* Top bar

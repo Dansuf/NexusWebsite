@@ -34,7 +34,6 @@
 	-ms-user-select: $select;
 	user-select: $select;
 }
-$main-colour: #088A08;
 
 * {
 	/* Reset browsers default margin, padding and font sizes */
@@ -228,7 +227,7 @@ p.right {
 	color: white;
 	background-position: center 0;
 	background-repeat: no-repeat;
-	border-bottom: 5px solid $main-colour;
+	border-bottom: 5px solid #333;
 	height: 350px;
 	margin: 0 auto;
 	
@@ -371,7 +370,7 @@ p.right {
 	a:hover 
 	{
 		cursor: pointer;
-		background: $main-colour;
+		background: #333;
 		color: #fff;
 		text-decoration: none;
 	}
@@ -506,7 +505,7 @@ p.right {
 	margin: 5px 0;
 	display: block;
 	clear: both;
-	background-color: $main-colour;
+	background-color: #333;
 	@include box-shadow(0 1px 1px rgba(255, 255, 255, 0.05));
 }
 

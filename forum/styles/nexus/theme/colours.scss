@@ -39,11 +39,12 @@ hr {
 /* Main blocks
 --------------------------------------------- */
 
-body>header {
+.welcome-img
+{
 	border-bottom-color: $main-colour;
 }
 
-#big-wrapper>footer {
+#footer {
 	border-top-color: $main-colour;
 }
 

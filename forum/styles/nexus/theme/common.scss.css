@@ -149,7 +149,7 @@ p.right {
   color: white;
   background-position: center 0;
   background-repeat: no-repeat;
-  border-bottom: 5px solid #088a08;
+  border-bottom: 5px solid #333;
   height: 350px;
   margin: 0 auto; }
   .welcome-img div {
@@ -265,7 +265,7 @@ p.right {
     text-decoration: none; }
   .menu a:hover {
     cursor: pointer;
-    background: #088a08;
+    background: #333;
     color: #fff;
     text-decoration: none; }
 
@@ -373,7 +373,7 @@ p.right {
   margin: 5px 0;
   display: block;
   clear: both;
-  background-color: #088a08;
+  background-color: #333;
   -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.05);
   -moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.05);
   -o-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.05);
